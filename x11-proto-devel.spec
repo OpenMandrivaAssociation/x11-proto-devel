@@ -1,6 +1,6 @@
 %define applewm_version 1.0.3
 %define bigreqs_version 1.0.2
-%define composite_version 0.3.1
+%define composite_version 0.4.0
 %define damage_version 1.1.0
 %define dmx_version 2.2.2
 %define evieext_version 1.0.2
@@ -146,6 +146,7 @@ fi
 %{_libdir}/pkgconfig/*.pc
 %{_datadir}/xcb/*
 # these are doc, but it is not worth creating a doc package to put them in
+%{_datadir}/doc/compositeproto/compositeproto.txt
 %{_datadir}/doc/damageproto/damageproto.txt
 %{_datadir}/doc/randrproto/randrproto.txt
 
