@@ -149,5 +149,6 @@ fi
 %{_datadir}/doc/compositeproto/compositeproto.txt
 %{_datadir}/doc/damageproto/damageproto.txt
 %{_datadir}/doc/randrproto/randrproto.txt
+%{_datadir}/doc/renderproto/renderproto.txt
 
 
