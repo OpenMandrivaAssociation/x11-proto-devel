@@ -35,7 +35,7 @@
 
 Name: x11-proto-devel
 Summary: Xorg X11 protocol specification header
-Version: 1.3.0
+Version: 1.4.0
 Release: %mkrel 1
 Group: Development/X11
 License: MIT
