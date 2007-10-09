@@ -8,12 +8,12 @@
 %define fontcache_version 0.1.2
 %define fonts_version 2.0.2
 %define gl_version 1.4.8
-%define input_version 1.4.1
+%define input_version 1.4.2.1
 %define kb_version 1.0.3
 %define print_version 1.0.3
 %define randr_version 1.2.1
 %define record_version 1.13.2
-%define render_version 0.9.2
+%define render_version 0.9.3
 %define resource_version 1.0.2
 %define scrnsaver_version 1.1.0
 %define trap_version 3.4.3
@@ -23,13 +23,13 @@
 %define xcmisc_version 1.1.2
 %define xext_version 7.0.2
 %define xf86bigfont_version 1.1.2
-%define xf86dga_version 2.0.2
+%define xf86dga_version 2.0.3
 %define xf86dri_version 2.0.3
 %define xf86misc_version 0.9.2
 %define xf86rush_version 1.1.2
 %define xf86vidmode_version 2.2.2
 %define xinerama_version 1.1.2
-%define xproto_version 7.0.10
+%define xproto_version 7.0.11
 %define xproxymanagement_version 1.0.2
 %define xcb_version 1.0
 
