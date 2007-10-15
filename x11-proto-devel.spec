@@ -34,8 +34,8 @@
 %define xcb_version 1.0
 
 Name: x11-proto-devel
-Summary: Xorg X11 protocol specification header
-Version: 1.4.0
+Summary: Xorg X11 protocol specification headers
+Version: 7.3
 Release: %mkrel 1
 Group: Development/X11
 License: MIT
@@ -86,7 +86,7 @@ BuildRequires: libxau-devel
 Conflicts: %{oldxorgnamedevel}-devel < 7.0
 
 %description
-CHECK
+X.Org X11 Protocol headers
 
 %prep
 %setup -q -c x11-proto-devel -b1 -b2 -b3 -b4 -b5 -b6 -b7 -b8 -b9 -b10 -b11 -b12 -b13 -b14 -b15 -b16 -b17 -b18 -b19 -b20 -b21 -b22 -b23 -b24 -b25 -b26 -b27 -b28 -b29 -b30 -b31 -b32 -b33
