@@ -7,7 +7,7 @@
 %define fixes_version 4.0
 %define fontcache_version 0.1.2
 %define fonts_version 2.0.2
-%define gl_version 1.4.8
+%define gl_version 1.4.9
 %define input_version 1.4.2.1
 %define kb_version 1.0.3
 %define print_version 1.0.3
@@ -150,5 +150,3 @@ fi
 %{_datadir}/doc/damageproto/damageproto.txt
 %{_datadir}/doc/randrproto/randrproto.txt
 %{_datadir}/doc/renderproto/renderproto.txt
-
-
