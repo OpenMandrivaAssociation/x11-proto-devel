@@ -74,7 +74,6 @@ Source30: http://xorg.freedesktop.org/releases/individual/proto/xproto-%{xproto_
 Source31: http://xorg.freedesktop.org/releases/individual/proto/xproxymanagementprotocol-%{xproxymanagement_version}.tar.bz2
 Source32: http://xf4vnc.sf.net/vncproto-%{vnc_version}.tar.bz2
 Source33: http://xcb.freedesktop.org/dist/xcb-proto-%{xcb_version}.tar.bz2
-BuildRoot: %{_tmppath}/%{name}-root
 BuildRequires: x11-util-macros >= 1.0.1
 #gw for the pkgconfig files
 #gw FIXME: this creates a circular dep on x11-proto-devel
