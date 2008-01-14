@@ -119,9 +119,11 @@ done
 %install
 rm -rf %{buildroot}
 for dir in *; do
-pushd $dir
-%makeinstall_std
-popd
+    if [ -d $dir ]; then
+	pushd $dir
+	%makeinstall_std
+	popd
+    fi
 done
 
 %clean
