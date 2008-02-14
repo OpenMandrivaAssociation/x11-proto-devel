@@ -38,6 +38,7 @@ Summary: Xorg X11 protocol specification headers
 Version: 7.3
 Release: %mkrel 2
 Group: Development/X11
+BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 License: MIT
 URL: http://xorg.freedesktop.org
 Source0: http://xorg.freedesktop.org/releases/individual/proto/applewmproto-%{applewm_version}.tar.bz2
