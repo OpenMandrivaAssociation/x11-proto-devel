@@ -27,7 +27,6 @@
 %define xf86dga_version 2.0.3
 %define xf86dri_version 2.0.4
 %define xf86misc_version 0.9.2
-%define xf86rush_version 1.1.2
 %define xf86vidmode_version 2.2.2
 %define xinerama_version 1.1.2
 %define xproto_version 7.0.12
@@ -37,7 +36,7 @@
 Name: x11-proto-devel
 Summary: Xorg X11 protocol specification headers
 Version: 7.3
-Release: %mkrel 3
+Release: %mkrel 4
 Group: Development/X11
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 License: MIT
@@ -69,14 +68,13 @@ Source23: http://xorg.freedesktop.org/releases/individual/proto/xf86bigfontproto
 Source24: http://xorg.freedesktop.org/releases/individual/proto/xf86dgaproto-%{xf86dga_version}.tar.bz2
 Source25: http://xorg.freedesktop.org/releases/individual/proto/xf86driproto-%{xf86dri_version}.tar.bz2
 Source26: http://xorg.freedesktop.org/releases/individual/proto/xf86miscproto-%{xf86misc_version}.tar.bz2
-Source27: http://xorg.freedesktop.org/releases/individual/proto/xf86rushproto-%{xf86rush_version}.tar.bz2
-Source28: http://xorg.freedesktop.org/releases/individual/proto/xf86vidmodeproto-%{xf86vidmode_version}.tar.bz2
-Source29: http://xorg.freedesktop.org/releases/individual/proto/xineramaproto-%{xinerama_version}.tar.bz2
-Source30: http://xorg.freedesktop.org/releases/individual/proto/xproto-%{xproto_version}.tar.bz2
-Source31: http://xorg.freedesktop.org/releases/individual/proto/xproxymanagementprotocol-%{xproxymanagement_version}.tar.bz2
-Source32: http://xf4vnc.sf.net/vncproto-%{vnc_version}.tar.bz2
-Source33: http://xcb.freedesktop.org/dist/xcb-proto-%{xcb_version}.tar.bz2
-Source34: http://xorg.freedesktop.org/releases/individual/proto/dri2proto-%{dri2_version}.tar.bz2
+Source27: http://xorg.freedesktop.org/releases/individual/proto/xf86vidmodeproto-%{xf86vidmode_version}.tar.bz2
+Source28: http://xorg.freedesktop.org/releases/individual/proto/xineramaproto-%{xinerama_version}.tar.bz2
+Source29: http://xorg.freedesktop.org/releases/individual/proto/xproto-%{xproto_version}.tar.bz2
+Source30: http://xorg.freedesktop.org/releases/individual/proto/xproxymanagementprotocol-%{xproxymanagement_version}.tar.bz2
+Source31: http://xf4vnc.sf.net/vncproto-%{vnc_version}.tar.bz2
+Source32: http://xcb.freedesktop.org/dist/xcb-proto-%{xcb_version}.tar.bz2
+Source33: http://xorg.freedesktop.org/releases/individual/proto/dri2proto-%{dri2_version}.tar.bz2
 BuildRequires: x11-util-macros >= 1.0.1
 #gw for the pkgconfig files
 #gw FIXME: this creates a circular dep on x11-proto-devel
@@ -91,7 +89,7 @@ Conflicts: %{oldxorgnamedevel}-devel < 7.0
 X.Org X11 Protocol headers
 
 %prep
-%setup -q -c x11-proto-devel -b1 -b2 -b3 -b4 -b5 -b6 -b7 -b8 -b9 -b10 -b11 -b12 -b13 -b14 -b15 -b16 -b17 -b18 -b19 -b20 -b21 -b22 -b23 -b24 -b25 -b26 -b27 -b28 -b29 -b30 -b31 -b32 -b33 -b34
+%setup -q -c x11-proto-devel -b1 -b2 -b3 -b4 -b5 -b6 -b7 -b8 -b9 -b10 -b11 -b12 -b13 -b14 -b15 -b16 -b17 -b18 -b19 -b20 -b21 -b22 -b23 -b24 -b25 -b26 -b27 -b28 -b29 -b30 -b31 -b32 -b33
 
 %build
 # vncproto is from cvs
