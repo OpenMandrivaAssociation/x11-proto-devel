@@ -36,7 +36,7 @@
 Name: x11-proto-devel
 Summary: Xorg X11 protocol specification headers
 Version: 7.3
-Release: %mkrel 4
+Release: %mkrel 5
 Group: Development/X11
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 License: MIT
@@ -85,11 +85,20 @@ BuildRequires: libxau-devel
 %define oldxorgnamedevel  %mklibname xorg-x11
 Conflicts: %{oldxorgnamedevel}-devel < 7.0
 
+Patch1: 0001-C-sucks-define-XEventClass-in-terms-of-unsigned-int.patch
+Patch2: 0002-Typo-fix.patch
+
 %description
 X.Org X11 Protocol headers
 
 %prep
 %setup -q -c x11-proto-devel -b1 -b2 -b3 -b4 -b5 -b6 -b7 -b8 -b9 -b10 -b11 -b12 -b13 -b14 -b15 -b16 -b17 -b18 -b19 -b20 -b21 -b22 -b23 -b24 -b25 -b26 -b27 -b28 -b29 -b30 -b31 -b32 -b33
+
+# Closes #41096 (Conflicting declarations between X11 and Qt)
+pushd inputproto-%{input_version}
+%patch1 -p1
+%patch2 -p1
+popd
 
 %build
 # vncproto is from cvs
