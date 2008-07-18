@@ -80,6 +80,7 @@ BuildRequires: x11-util-macros >= 1.0.1
 #gw FIXME: this creates a circular dep on x11-proto-devel
 BuildRequires: libxt-devel
 BuildRequires: libxau-devel
+BuildRequires: python
 #gw this is just for bootstrapping:
 #Provides: pkgconfig(xproto) pkgconfig(kbproto) pkgconfig(renderproto)
 %define oldxorgnamedevel  %mklibname xorg-x11
