@@ -12,7 +12,7 @@
 %define input_version 1.4.3
 %define kb_version 1.0.3
 %define print_version 1.0.4
-%define randr_version 1.2.1
+%define randr_version 1.2.2
 %define record_version 1.13.2
 %define render_version 0.9.3
 %define resource_version 1.0.2
@@ -31,12 +31,12 @@
 %define xinerama_version 1.1.2
 %define xproto_version 7.0.12
 %define xproxymanagement_version 1.0.2
-%define xcb_version 1.1
+%define xcb_version 1.2
 
 Name: x11-proto-devel
 Summary: Xorg X11 protocol specification headers
 Version: 7.3
-Release: %mkrel 5
+Release: %mkrel 6
 Group: Development/X11
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 License: MIT
@@ -161,3 +161,22 @@ fi
 %{_datadir}/doc/damageproto/damageproto.txt
 %{_datadir}/doc/randrproto/randrproto.txt
 %{_datadir}/doc/renderproto/renderproto.txt
+# xcbgen stuff
+%{_libdir}/python2.5/site-packages/xcbgen/__init__.py
+%{_libdir}/python2.5/site-packages/xcbgen/__init__.pyc
+%{_libdir}/python2.5/site-packages/xcbgen/__init__.pyo
+%{_libdir}/python2.5/site-packages/xcbgen/error.py
+%{_libdir}/python2.5/site-packages/xcbgen/error.pyc
+%{_libdir}/python2.5/site-packages/xcbgen/error.pyo
+%{_libdir}/python2.5/site-packages/xcbgen/expr.py
+%{_libdir}/python2.5/site-packages/xcbgen/expr.pyc
+%{_libdir}/python2.5/site-packages/xcbgen/expr.pyo
+%{_libdir}/python2.5/site-packages/xcbgen/matcher.py
+%{_libdir}/python2.5/site-packages/xcbgen/matcher.pyc
+%{_libdir}/python2.5/site-packages/xcbgen/matcher.pyo
+%{_libdir}/python2.5/site-packages/xcbgen/state.py
+%{_libdir}/python2.5/site-packages/xcbgen/state.pyc
+%{_libdir}/python2.5/site-packages/xcbgen/state.pyo
+%{_libdir}/python2.5/site-packages/xcbgen/xtypes.py
+%{_libdir}/python2.5/site-packages/xcbgen/xtypes.pyc
+%{_libdir}/python2.5/site-packages/xcbgen/xtypes.pyo
