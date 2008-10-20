@@ -1,4 +1,4 @@
-%define applewm_version 1.0.3
+%define applewm_version 1.1.1
 %define bigreqs_version 1.0.2
 %define composite_version 0.4.0
 %define damage_version 1.1.0
@@ -9,7 +9,7 @@
 %define fontcache_version 0.1.2
 %define fonts_version 2.0.2
 %define gl_version 1.4.9
-%define input_version 1.4.3
+%define input_version 1.4.4
 %define kb_version 1.0.3
 %define print_version 1.0.4
 %define randr_version 1.2.2
@@ -22,21 +22,21 @@
 %define vnc_version 1.0.0
 %define windowswm_version 1.0.3
 %define xcmisc_version 1.1.2
-%define xext_version 7.0.2
+%define xext_version 7.0.3
 %define xf86bigfont_version 1.1.2
 %define xf86dga_version 2.0.3
 %define xf86dri_version 2.0.4
 %define xf86misc_version 0.9.2
 %define xf86vidmode_version 2.2.2
 %define xinerama_version 1.1.2
-%define xproto_version 7.0.12
+%define xproto_version 7.0.13
 %define xproxymanagement_version 1.0.2
 %define xcb_version 1.2
 
 Name: x11-proto-devel
 Summary: Xorg X11 protocol specification headers
-Version: 7.3
-Release: %mkrel 6
+Version: 7.4
+Release: %mkrel 1
 Group: Development/X11
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 License: MIT
@@ -86,20 +86,11 @@ BuildRequires: python
 %define oldxorgnamedevel  %mklibname xorg-x11
 Conflicts: %{oldxorgnamedevel}-devel < 7.0
 
-Patch1: 0001-C-sucks-define-XEventClass-in-terms-of-unsigned-int.patch
-Patch2: 0002-Typo-fix.patch
-
 %description
 X.Org X11 Protocol headers
 
 %prep
 %setup -q -c x11-proto-devel -b1 -b2 -b3 -b4 -b5 -b6 -b7 -b8 -b9 -b10 -b11 -b12 -b13 -b14 -b15 -b16 -b17 -b18 -b19 -b20 -b21 -b22 -b23 -b24 -b25 -b26 -b27 -b28 -b29 -b30 -b31 -b32 -b33
-
-# Closes #41096 (Conflicting declarations between X11 and Qt)
-pushd inputproto-%{input_version}
-%patch1 -p1
-%patch2 -p1
-popd
 
 %build
 # vncproto is from cvs
