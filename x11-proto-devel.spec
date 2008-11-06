@@ -29,14 +29,14 @@
 %define xf86misc_version 0.9.2
 %define xf86vidmode_version 2.2.2
 %define xinerama_version 1.1.2
-%define xproto_version 7.0.13
+%define xproto_version 7.0.14
 %define xproxymanagement_version 1.0.2
 %define xcb_version 1.2
 
 Name: x11-proto-devel
 Summary: Xorg X11 protocol specification headers
 Version: 7.4
-Release: %mkrel 1
+Release: %mkrel 2
 Group: Development/X11
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 License: MIT
@@ -78,7 +78,8 @@ Source33: http://xorg.freedesktop.org/releases/individual/proto/dri2proto-%{dri2
 BuildRequires: x11-util-macros >= 1.0.1
 #gw for the pkgconfig files
 #gw FIXME: this creates a circular dep on x11-proto-devel
-BuildRequires: libxt-devel
+# (cg) libxt-devel does not seem to be needed anymore?
+#BuildRequires: libxt-devel
 BuildRequires: libxau-devel
 BuildRequires: python
 #gw this is just for bootstrapping:
