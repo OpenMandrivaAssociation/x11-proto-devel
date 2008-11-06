@@ -78,9 +78,9 @@ Source33: http://xorg.freedesktop.org/releases/individual/proto/dri2proto-%{dri2
 BuildRequires: x11-util-macros >= 1.0.1
 #gw for the pkgconfig files
 #gw FIXME: this creates a circular dep on x11-proto-devel
-# (cg) libxt-devel does not seem to be needed anymore?
+# (cg) libx{t,au}-devel does not seem to be needed anymore?
 #BuildRequires: libxt-devel
-BuildRequires: libxau-devel
+#BuildRequires: libxau-devel
 BuildRequires: python
 #gw this is just for bootstrapping:
 #Provides: pkgconfig(xproto) pkgconfig(kbproto) pkgconfig(renderproto)
