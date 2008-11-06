@@ -36,7 +36,7 @@
 Name: x11-proto-devel
 Summary: Xorg X11 protocol specification headers
 Version: 7.4
-Release: %mkrel 2
+Release: %mkrel 3
 Group: Development/X11
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 License: MIT
@@ -78,12 +78,11 @@ Source33: http://xorg.freedesktop.org/releases/individual/proto/dri2proto-%{dri2
 BuildRequires: x11-util-macros >= 1.0.1
 #gw for the pkgconfig files
 #gw FIXME: this creates a circular dep on x11-proto-devel
-# (cg) libx{t,au}-devel does not seem to be needed anymore?
 #BuildRequires: libxt-devel
 #BuildRequires: libxau-devel
 BuildRequires: python
 #gw this is just for bootstrapping:
-#Provides: pkgconfig(xproto) pkgconfig(kbproto) pkgconfig(renderproto)
+Provides: pkgconfig(xproto) pkgconfig(kbproto) pkgconfig(renderproto)
 %define oldxorgnamedevel  %mklibname xorg-x11
 Conflicts: %{oldxorgnamedevel}-devel < 7.0
 
