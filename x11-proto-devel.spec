@@ -36,7 +36,7 @@
 Name: x11-proto-devel
 Summary: Xorg X11 protocol specification headers
 Version: 7.4
-Release: %mkrel 3
+Release: %mkrel 4
 Group: Development/X11
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 License: MIT
@@ -76,13 +76,22 @@ Source31: http://xf4vnc.sf.net/vncproto-%{vnc_version}.tar.bz2
 Source32: http://xcb.freedesktop.org/dist/xcb-proto-%{xcb_version}.tar.bz2
 Source33: http://xorg.freedesktop.org/releases/individual/proto/dri2proto-%{dri2_version}.tar.bz2
 BuildRequires: x11-util-macros >= 1.0.1
-#gw for the pkgconfig files
-#gw FIXME: this creates a circular dep on x11-proto-devel
-#BuildRequires: libxt-devel
-#BuildRequires: libxau-devel
+
+# (cg) As previously noted by gw, requiring libxt-devel and libxau-devel
+# creates a circular dependancy. This can cause problems when building e.g.
+# libx11 as it requires itself. When libxcb changed and droped a provided library
+# libx11 could not be rebuilt due to this problem.
+#
+# In order to build libx11 without the circular problem, it is necessary
+# to submit a bootstrapping version of this package that contains the minimal
+# (manual) pkgconfig() provides as commented below, and disable the 
+# BuildRequires on libxt-devel and libxau-devel.
+# After libx11 is built and available, this package should be reverted.
+BuildRequires: libxt-devel
+BuildRequires: libxau-devel
 BuildRequires: python
 #gw this is just for bootstrapping:
-Provides: pkgconfig(xproto) pkgconfig(kbproto) pkgconfig(renderproto)
+#Provides: pkgconfig(xproto) pkgconfig(kbproto) pkgconfig(renderproto)
 %define oldxorgnamedevel  %mklibname xorg-x11
 Conflicts: %{oldxorgnamedevel}-devel < 7.0
 
