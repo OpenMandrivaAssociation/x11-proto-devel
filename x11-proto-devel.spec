@@ -14,7 +14,7 @@
 %define input_version 1.5.0
 %define kb_version 1.0.3
 %define print_version 1.0.4
-%define randr_version 1.2.99.1
+%define randr_version 1.2.99.3
 %define record_version 1.13.2
 %define render_version 0.9.3
 %define resource_version 1.0.2
@@ -33,12 +33,12 @@
 %define xinerama_version 1.1.2
 %define xproto_version 7.0.14
 %define xproxymanagement_version 1.0.2
-%define xcb_version 1.2
+%define xcb_version 1.3
 
 Name: x11-proto-devel
 Summary: Xorg X11 protocol specification headers
 Version: 7.4
-Release: %mkrel 6
+Release: %mkrel 7
 Group: Development/X11
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 License: MIT
