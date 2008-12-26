@@ -38,7 +38,7 @@
 Name: x11-proto-devel
 Summary: Xorg X11 protocol specification headers
 Version: 7.4
-Release: %mkrel 8
+Release: %mkrel 9
 Group: Development/X11
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 License: MIT
