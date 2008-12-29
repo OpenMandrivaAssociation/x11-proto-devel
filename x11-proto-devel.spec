@@ -3,9 +3,7 @@
 %define composite_version 0.4.0
 %define damage_version 1.1.0
 %define dmx_version 2.2.2
-# (cg) dri2 proto is tied heavily to mesa. 
-# When updating please ensure mesa still compiles
-%define dri2_version 20080812
+%define dri2_version 1.99.3
 %define evieext_version 1.0.2
 %define fixes_version 4.0
 %define fontcache_version 0.1.2
@@ -38,7 +36,7 @@
 Name: x11-proto-devel
 Summary: Xorg X11 protocol specification headers
 Version: 7.4
-Release: %mkrel 9
+Release: %mkrel 10
 Group: Development/X11
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 License: MIT
@@ -109,10 +107,6 @@ pushd vncproto-*
 aclocal
 automake -a -c
 autoconf
-popd
-
-pushd dri2proto-*
-./autogen.sh -V
 popd
 
 for dir in *; do
