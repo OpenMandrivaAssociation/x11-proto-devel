@@ -31,12 +31,12 @@
 %define xinerama_version 1.1.2
 %define xproto_version 7.0.14
 %define xproxymanagement_version 1.0.2
-%define xcb_version 1.3
+%define xcb_version 1.4
 
 Name: x11-proto-devel
 Summary: Xorg X11 protocol specification headers
 Version: 7.4
-Release: %mkrel 11
+Release: %mkrel 12
 Group: Development/X11
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 License: MIT
