@@ -36,7 +36,7 @@
 Name: x11-proto-devel
 Summary: Xorg X11 protocol specification headers
 Version: 7.4
-Release: %mkrel 13
+Release: %mkrel 14
 Group: Development/X11
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 License: MIT
@@ -75,6 +75,9 @@ Source30: http://xorg.freedesktop.org/releases/individual/proto/xproxymanagement
 Source31: http://xf4vnc.sf.net/vncproto-%{vnc_version}.tar.bz2
 Source32: http://xcb.freedesktop.org/dist/xcb-proto-%{xcb_version}.tar.bz2
 Source33: http://xorg.freedesktop.org/releases/individual/proto/dri2proto-%{dri2_version}.tar.bz2
+
+# (fc) 7.4-14mdv add XF86XK_Suspend and XF86XK_Hibernate to keysyms
+Patch0: x11proto-7.0.14-XF86XK_Suspend.patch
 BuildRequires: x11-util-macros >= 1.0.1
 
 # (cg) As previously noted by gw, requiring libxt-devel and libxau-devel
@@ -100,6 +103,8 @@ X.Org X11 Protocol headers
 
 %prep
 %setup -q -c x11-proto-devel -b1 -b2 -b3 -b4 -b5 -b6 -b7 -b8 -b9 -b10 -b11 -b12 -b13 -b14 -b15 -b16 -b17 -b18 -b19 -b20 -b21 -b22 -b23 -b24 -b25 -b26 -b27 -b28 -b29 -b30 -b31 -b32 -b33
+
+%patch0 -p1 -b .suspend
 
 %build
 # vncproto is from cvs
