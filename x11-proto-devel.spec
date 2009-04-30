@@ -3,7 +3,7 @@
 %define composite_version 0.4.0
 %define damage_version 1.1.0
 %define dmx_version 2.2.2
-%define dri2_version 1.99.3
+%define dri2_version 2.0
 %define evieext_version 1.0.2
 %define fixes_version 4.0
 %define fontcache_version 0.1.2
