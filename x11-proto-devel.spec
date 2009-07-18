@@ -1,4 +1,4 @@
-%define applewm_version 1.1.1
+%define applewm_version 1.3.0
 %define bigreqs_version 1.0.2
 %define composite_version 0.4.0
 %define damage_version 1.1.0
@@ -9,7 +9,7 @@
 %define fontcache_version 0.1.2
 %define fonts_version 2.0.2
 %define gl_version 1.4.10
-%define input_version 1.5.1
+%define input_version 1.9.99.14
 %define kb_version 1.0.3
 %define print_version 1.0.4
 %define randr_version 1.3.0
@@ -36,7 +36,7 @@
 Name: x11-proto-devel
 Summary: Xorg X11 protocol specification headers
 Version: 7.4
-Release: %mkrel 21
+Release: %mkrel 22
 Group: Development/X11
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 License: MIT
