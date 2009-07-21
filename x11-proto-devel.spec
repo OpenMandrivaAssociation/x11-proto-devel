@@ -22,7 +22,7 @@
 %define vnc_version 1.0.0
 %define windowswm_version 1.0.3
 %define xcmisc_version 1.1.2
-%define xext_version 7.0.99.1
+%define xext_version 7.0.5
 %define xf86bigfont_version 1.1.2
 %define xf86dga_version 2.0.3
 %define xf86dri_version 2.0.4
@@ -36,7 +36,7 @@
 Name: x11-proto-devel
 Summary: Xorg X11 protocol specification headers
 Version: 7.4
-Release: %mkrel 23
+Release: %mkrel 24
 Group: Development/X11
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 License: MIT
@@ -95,7 +95,7 @@ BuildRequires: python
 #Provides: pkgconfig(xproto) pkgconfig(kbproto) pkgconfig(renderproto)
 %define oldxorgnamedevel  %mklibname xorg-x11
 Conflicts: %{oldxorgnamedevel}-devel < 7.0
-Conflicts: libxext-devel < 1.0.99.3
+Conflicts: libxext6-devel <= 1.0.99.3-1mdv2010.0
 
 %description
 X.Org X11 Protocol headers
