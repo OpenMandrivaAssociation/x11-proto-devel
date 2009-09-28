@@ -1,3 +1,7 @@
+%define bootstrap 0
+%{?_without_bootstrap: %global bootstrap 0}
+%{?_with_bootstrap: %global bootstrap 1}
+
 %define applewm_version 1.4.1
 %define bigreqs_version 1.1.0
 %define composite_version 0.4.0
@@ -36,7 +40,7 @@
 Name: x11-proto-devel
 Summary: Xorg X11 protocol specification headers
 Version: 7.4
-Release: %mkrel 25
+Release: %mkrel 26
 Group: Development/X11
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 License: MIT
@@ -88,11 +92,13 @@ BuildRequires: x11-util-macros >= 1.0.1
 # (manual) pkgconfig() provides as commented below, and disable the 
 # BuildRequires on libxt-devel and libxau-devel.
 # After libx11 is built and available, this package should be reverted.
+%if %bootstrap
+Provides: pkgconfig(xproto) pkgconfig(kbproto) pkgconfig(renderproto)
+%else
 BuildRequires: libxt-devel
 BuildRequires: libxau-devel
+%endif
 BuildRequires: python
-#gw this is just for bootstrapping:
-#Provides: pkgconfig(xproto) pkgconfig(kbproto) pkgconfig(renderproto)
 %define oldxorgnamedevel  %mklibname xorg-x11
 Conflicts: %{oldxorgnamedevel}-devel < 7.0
 Conflicts: libxext6-devel <= 1.0.99.3-1mdv2010.0
