@@ -4,43 +4,43 @@
 
 %define applewm_version 1.4.1
 %define bigreqs_version 1.1.0
-%define composite_version 0.4.0
+%define composite_version 0.4.1
 %define damage_version 1.2.0
-%define dmx_version 2.2.2
+%define dmx_version 2.3
 %define dri2_version 2.1
-%define evieext_version 1.0.2
-%define fixes_version 4.0
-%define fontcache_version 0.1.2
+%define evieext_version 1.1.0
+%define fixes_version 4.1.1
+%define fontcache_version 0.1.3
 %define fonts_version 2.1.0
 %define gl_version 1.4.10
-%define input_version 1.5.1
-%define kb_version 1.0.3
+%define input_version 2.0
+%define kb_version 1.0.4
 %define print_version 1.0.4
-%define randr_version 1.3.0
-%define record_version 1.13.2
+%define randr_version 1.3.1
+%define record_version 1.14
 %define render_version 0.11
 %define resource_version 1.1.0
 %define scrnsaver_version 1.2.0
 %define trap_version 3.4.3
 %define video_version 2.3.0
 %define vnc_version 1.0.0
-%define windowswm_version 1.0.3
+%define windowswm_version 1.0.4
 %define xcmisc_version 1.2.0
-%define xext_version 7.0.5
+%define xext_version 7.1.1
 %define xf86bigfont_version 1.2.0
-%define xf86dga_version 2.0.3
-%define xf86dri_version 2.0.4
-%define xf86misc_version 0.9.2
-%define xf86vidmode_version 2.2.2
-%define xinerama_version 1.1.2
-%define xproto_version 7.0.15
+%define xf86dga_version 2.1
+%define xf86dri_version 2.1.0
+%define xf86misc_version 0.9.3
+%define xf86vidmode_version 2.3
+%define xinerama_version 1.2
+%define xproto_version 7.0.16
 %define xproxymanagement_version 1.0.2
 %define xcb_version 1.5
 
 Name: x11-proto-devel
 Summary: Xorg X11 protocol specification headers
-Version: 7.4
-Release: %mkrel 26
+Version: 7.5
+Release: %mkrel 1
 Group: Development/X11
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 License: MIT
@@ -168,6 +168,7 @@ fi
 # these are doc, but it is not worth creating a doc package to put them in
 %{_datadir}/doc/compositeproto/compositeproto.txt
 %{_datadir}/doc/damageproto/damageproto.txt
+%{_datadir}/doc/fixesproto/fixesproto.txt
 %{_datadir}/doc/randrproto/randrproto.txt
 %{_datadir}/doc/renderproto/renderproto.txt
 # xcbgen stuff
