@@ -34,13 +34,13 @@
 %define xf86vidmode_version 2.3
 %define xinerama_version 1.2
 %define xproto_version 7.0.16
-%define xproxymanagement_version 1.0.2
+%define xproxymanagement_version 1.0.3
 %define xcb_version 1.5
 
 Name: x11-proto-devel
 Summary: Xorg X11 protocol specification headers
 Version: 7.5
-Release: %mkrel 1
+Release: %mkrel 2
 Group: Development/X11
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 License: MIT
@@ -171,6 +171,7 @@ fi
 %{_datadir}/doc/fixesproto/fixesproto.txt
 %{_datadir}/doc/randrproto/randrproto.txt
 %{_datadir}/doc/renderproto/renderproto.txt
+%{_datadir}/doc/xproxymanagementprotocol/PM_spec
 # xcbgen stuff
 %{python_sitelib}/xcbgen/__init__.py
 %{python_sitelib}/xcbgen/__init__.pyc
