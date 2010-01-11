@@ -7,12 +7,12 @@
 %define composite_version 0.4.1
 %define damage_version 1.2.0
 %define dmx_version 2.3
-%define dri2_version 2.1
+%define dri2_version 2.2
 %define evieext_version 1.1.0
 %define fixes_version 4.1.1
 %define fontcache_version 0.1.3
 %define fonts_version 2.1.0
-%define gl_version 1.4.10
+%define gl_version 1.4.11
 %define input_version 2.0
 %define kb_version 1.0.4
 %define print_version 1.0.4
@@ -40,7 +40,7 @@
 Name: x11-proto-devel
 Summary: Xorg X11 protocol specification headers
 Version: 7.5
-Release: %mkrel 3
+Release: %mkrel 4
 Group: Development/X11
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 License: MIT
