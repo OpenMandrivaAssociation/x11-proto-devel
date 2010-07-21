@@ -33,14 +33,14 @@
 %define xf86misc_version 0.9.3
 %define xf86vidmode_version 2.3
 %define xinerama_version 1.2
-%define xproto_version 7.0.16
+%define xproto_version 7.0.17
 %define xproxymanagement_version 1.0.3
 %define xcb_version 1.6
 
 Name: x11-proto-devel
 Summary: Xorg X11 protocol specification headers
 Version: 7.5
-Release: %mkrel 5
+Release: %mkrel 6
 Group: Development/X11
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 License: MIT
