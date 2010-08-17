@@ -12,35 +12,35 @@
 %define fixes_version 4.1.1
 %define fontcache_version 0.1.3
 %define fonts_version 2.1.0
-%define gl_version 1.4.11
+%define gl_version 1.4.12
 %define input_version 2.0
-%define kb_version 1.0.4
+%define kb_version 1.0.5
 %define print_version 1.0.4
 %define randr_version 1.3.1
 %define record_version 1.14
-%define render_version 0.11
+%define render_version 0.11.1
 %define resource_version 1.1.0
 %define scrnsaver_version 1.2.0
 %define trap_version 3.4.3
-%define video_version 2.3.0
+%define video_version 2.3.1
 %define vnc_version 1.0.0
 %define windowswm_version 1.0.4
 %define xcmisc_version 1.2.0
-%define xext_version 7.1.1
+%define xext_version 7.1.2
 %define xf86bigfont_version 1.2.0
 %define xf86dga_version 2.1
 %define xf86dri_version 2.1.0
 %define xf86misc_version 0.9.3
 %define xf86vidmode_version 2.3
 %define xinerama_version 1.2
-%define xproto_version 7.0.17
+%define xproto_version 7.0.18
 %define xproxymanagement_version 1.0.3
 %define xcb_version 1.6
 
 Name: x11-proto-devel
 Summary: Xorg X11 protocol specification headers
 Version: 7.5
-Release: %mkrel 6
+Release: %mkrel 7
 Group: Development/X11
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 License: MIT
