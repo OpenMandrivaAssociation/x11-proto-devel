@@ -171,6 +171,19 @@ fi
 %{_datadir}/doc/fixesproto/fixesproto.txt
 %{_datadir}/doc/randrproto/randrproto.txt
 %{_datadir}/doc/renderproto/renderproto.txt
+%{_datadir}/doc/videoproto/xv-protocol-v2.txt
+%{_datadir}/doc/xextproto/appgroup.xml
+%{_datadir}/doc/xextproto/dbe.xml
+%{_datadir}/doc/xextproto/dpms.xml
+%{_datadir}/doc/xextproto/evi.xml
+%{_datadir}/doc/xextproto/geproto.xml
+%{_datadir}/doc/xextproto/multibuf.xml
+%{_datadir}/doc/xextproto/security.xml
+%{_datadir}/doc/xextproto/shape.xml
+%{_datadir}/doc/xextproto/shm.xml
+%{_datadir}/doc/xextproto/sync.xml
+%{_datadir}/doc/xextproto/tog-cup.xml
+%{_datadir}/doc/xextproto/xtest.xml
 %{_datadir}/doc/xproxymanagementprotocol/PM_spec
 # xcbgen stuff
 %{python_sitelib}/xcbgen/__init__.py
