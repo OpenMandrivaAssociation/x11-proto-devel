@@ -166,12 +166,17 @@ fi
 %{_libdir}/pkgconfig/*.pc
 %{_datadir}/xcb/*
 # these are doc, but it is not worth creating a doc package to put them in
+%{_datadir}/doc/bigreqsproto/bigreq.xml
 %{_datadir}/doc/compositeproto/compositeproto.txt
 %{_datadir}/doc/damageproto/damageproto.txt
 %{_datadir}/doc/fixesproto/fixesproto.txt
+%{_datadir}/doc/fontsproto/fsproto.xml
 %{_datadir}/doc/randrproto/randrproto.txt
+%{_datadir}/doc/recordproto/record.xml
 %{_datadir}/doc/renderproto/renderproto.txt
+%{_datadir}/doc/scrnsaverproto/saver.xml
 %{_datadir}/doc/videoproto/xv-protocol-v2.txt
+%{_datadir}/doc/xcmiscproto/xc-misc.xml
 %{_datadir}/doc/xextproto/appgroup.xml
 %{_datadir}/doc/xextproto/dbe.xml
 %{_datadir}/doc/xextproto/dpms.xml
