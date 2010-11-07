@@ -190,6 +190,11 @@ fi
 %{_datadir}/doc/xextproto/tog-cup.xml
 %{_datadir}/doc/xextproto/xtest.xml
 %{_datadir}/doc/xproxymanagementprotocol/PM_spec
+%{_datadir}/doc/xproto/encoding.xml
+%{_datadir}/doc/xproto/glossary.xml
+%{_datadir}/doc/xproto/keysyms.xml
+%{_datadir}/doc/xproto/sect1-9.xml
+%{_datadir}/doc/xproto/x11protocol.xml
 # xcbgen stuff
 %{python_sitelib}/xcbgen/__init__.py
 %{python_sitelib}/xcbgen/__init__.pyc
