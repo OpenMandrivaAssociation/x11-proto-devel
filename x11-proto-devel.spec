@@ -13,7 +13,7 @@
 %define fontcache_version 0.1.3
 %define fonts_version 2.1.1
 %define gl_version 1.4.12
-%define input_version 2.0
+%define input_version 2.0.1
 %define kb_version 1.0.5
 %define print_version 1.0.4
 %define randr_version 1.3.2
@@ -40,7 +40,7 @@
 Name: x11-proto-devel
 Summary: Xorg X11 protocol specification headers
 Version: 7.6
-Release: %mkrel 0.2
+Release: %mkrel 0.3
 Group: Development/X11
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 License: MIT
