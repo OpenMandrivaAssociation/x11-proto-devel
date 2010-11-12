@@ -171,6 +171,7 @@ fi
 %{_datadir}/doc/damageproto/damageproto.txt
 %{_datadir}/doc/fixesproto/fixesproto.txt
 %{_datadir}/doc/fontsproto/fsproto.xml
+%{_datadir}/doc/inputproto/*
 %{_datadir}/doc/randrproto/randrproto.txt
 %{_datadir}/doc/recordproto/record.xml
 %{_datadir}/doc/renderproto/renderproto.txt
