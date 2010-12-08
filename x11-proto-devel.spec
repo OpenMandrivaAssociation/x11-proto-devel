@@ -1,6 +1,6 @@
-%define bootstrap 0
-%{?_without_bootstrap: %global bootstrap 0}
-%{?_with_bootstrap: %global bootstrap 1}
+#define bootstrap 0
+#{?_without_bootstrap: %global bootstrap 0}
+#{?_with_bootstrap: %global bootstrap 1}
 
 %define applewm_version 1.4.1
 %define bigreqs_version 1.1.1
@@ -92,12 +92,12 @@ BuildRequires: x11-util-macros >= 1.0.1
 # (manual) pkgconfig() provides as commented below, and disable the 
 # BuildRequires on libxt-devel and libxau-devel.
 # After libx11 is built and available, this package should be reverted.
-%if %bootstrap
-Provides: pkgconfig(xproto) pkgconfig(kbproto) pkgconfig(renderproto)
-%else
-BuildRequires: libxt-devel
-BuildRequires: libxau-devel
-%endif
+#if %bootstrap
+#Provides: pkgconfig(xproto) pkgconfig(kbproto) pkgconfig(renderproto)
+#else
+#BuildRequires: libxt-devel
+#BuildRequires: libxau-devel
+#endif
 BuildRequires: python
 %define oldxorgnamedevel  %mklibname xorg-x11
 Conflicts: %{oldxorgnamedevel}-devel < 7.0
