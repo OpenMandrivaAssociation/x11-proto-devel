@@ -82,6 +82,13 @@ Source33: http://xorg.freedesktop.org/releases/individual/proto/dri2proto-%{dri2
 
 BuildRequires: x11-util-macros >= 1.0.1
 
+# For docs:
+BuildRequires: docbook-dtd412-xml
+BuildRequires: docbook-dtd45-xml
+BuildRequires: fop
+BuildRequires: xmlto
+BuildRequires: x11-sgml-doctools
+
 # (cg) As previously noted by gw, requiring libxt-devel and libxau-devel
 # creates a circular dependancy. This can cause problems when building e.g.
 # libx11 as it requires itself. When libxcb changed and droped a provided library
@@ -105,6 +112,21 @@ Conflicts: libxext6-devel <= 1.0.99.3-1mdv2010.0
 
 %description
 X.Org X11 Protocol headers
+
+#-----------------------------------------------------------
+
+%package -n x11-proto-doc
+
+Summary: Documentation for the X11 protocol and extensions
+Group:   Development/X11
+
+# Old proto-devel versions had some docs:
+Conflicts: x11-proto-devel <= 7.6-0.3mdv2011.0
+
+%description -n x11-proto-doc
+Documentation for the X11 protocol and extensions.
+
+#-----------------------------------------------------------
 
 %prep
 %setup -q -c x11-proto-devel -b1 -b2 -b3 -b4 -b5 -b6 -b7 -b8 -b9 -b10 -b11 -b12 -b13 -b14 -b15 -b16 -b17 -b18 -b19 -b20 -b21 -b22 -b23 -b24 -b25 -b26 -b27 -b28 -b29 -b30 -b31 -b32 -b33
@@ -165,37 +187,6 @@ fi
 %{_includedir}/X11/PM/*
 %{_libdir}/pkgconfig/*.pc
 %{_datadir}/xcb/*
-# these are doc, but it is not worth creating a doc package to put them in
-%{_datadir}/doc/bigreqsproto/bigreq.xml
-%{_datadir}/doc/compositeproto/compositeproto.txt
-%{_datadir}/doc/damageproto/damageproto.txt
-%{_datadir}/doc/fixesproto/fixesproto.txt
-%{_datadir}/doc/fontsproto/fsproto.xml
-%{_datadir}/doc/inputproto/*
-%{_datadir}/doc/randrproto/randrproto.txt
-%{_datadir}/doc/recordproto/record.xml
-%{_datadir}/doc/renderproto/renderproto.txt
-%{_datadir}/doc/scrnsaverproto/saver.xml
-%{_datadir}/doc/videoproto/xv-protocol-v2.txt
-%{_datadir}/doc/xcmiscproto/xc-misc.xml
-%{_datadir}/doc/xextproto/appgroup.xml
-%{_datadir}/doc/xextproto/dbe.xml
-%{_datadir}/doc/xextproto/dpms.xml
-%{_datadir}/doc/xextproto/evi.xml
-%{_datadir}/doc/xextproto/geproto.xml
-%{_datadir}/doc/xextproto/multibuf.xml
-%{_datadir}/doc/xextproto/security.xml
-%{_datadir}/doc/xextproto/shape.xml
-%{_datadir}/doc/xextproto/shm.xml
-%{_datadir}/doc/xextproto/sync.xml
-%{_datadir}/doc/xextproto/tog-cup.xml
-%{_datadir}/doc/xextproto/xtest.xml
-%{_datadir}/doc/xproxymanagementprotocol/PM_spec
-%{_datadir}/doc/xproto/encoding.xml
-%{_datadir}/doc/xproto/glossary.xml
-%{_datadir}/doc/xproto/keysyms.xml
-%{_datadir}/doc/xproto/sect1-9.xml
-%{_datadir}/doc/xproto/x11protocol.xml
 # xcbgen stuff
 %{python_sitelib}/xcbgen/__init__.py
 %{python_sitelib}/xcbgen/__init__.pyc
@@ -215,3 +206,21 @@ fi
 %{python_sitelib}/xcbgen/xtypes.py
 %{python_sitelib}/xcbgen/xtypes.pyc
 %{python_sitelib}/xcbgen/xtypes.pyo
+
+%files -n x11-proto-doc
+%defattr(-,root,root)
+%{_datadir}/doc/bigreqsproto
+%{_datadir}/doc/compositeproto
+%{_datadir}/doc/damageproto
+%{_datadir}/doc/fixesproto
+%{_datadir}/doc/fontsproto
+%{_datadir}/doc/inputproto
+%{_datadir}/doc/randrproto
+%{_datadir}/doc/recordproto
+%{_datadir}/doc/renderproto
+%{_datadir}/doc/scrnsaverproto
+%{_datadir}/doc/videoproto
+%{_datadir}/doc/xcmiscproto
+%{_datadir}/doc/xextproto
+%{_datadir}/doc/xproxymanagementprotocol
+%{_datadir}/doc/xproto
