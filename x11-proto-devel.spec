@@ -6,16 +6,16 @@
 %define bigreqs_version 1.1.1
 %define composite_version 0.4.2
 %define damage_version 1.2.1
-%define dmx_version 2.3
+%define dmx_version 2.3.1
 %define dri2_version 2.3
-%define evieext_version 1.1.0
+%define evieext_version 1.1.1
 %define fixes_version 4.1.2
 %define fontcache_version 0.1.3
 %define fonts_version 2.1.1
 %define gl_version 1.4.12
 %define input_version 2.0.1
 %define kb_version 1.0.5
-%define print_version 1.0.4
+%define print_version 1.0.5
 %define randr_version 1.3.2
 %define record_version 1.14.1
 %define render_version 0.11.1
@@ -29,10 +29,10 @@
 %define xext_version 7.1.2
 %define xf86bigfont_version 1.2.0
 %define xf86dga_version 2.1
-%define xf86dri_version 2.1.0
+%define xf86dri_version 2.1.1
 %define xf86misc_version 0.9.3
-%define xf86vidmode_version 2.3
-%define xinerama_version 1.2
+%define xf86vidmode_version 2.3.1
+%define xinerama_version 1.2.1
 %define xproto_version 7.0.20
 %define xproxymanagement_version 1.0.3
 %define xcb_version 1.6
@@ -40,7 +40,7 @@
 Name: x11-proto-devel
 Summary: Xorg X11 protocol specification headers
 Version: 7.6
-Release: %mkrel 0.5
+Release: %mkrel 1
 Group: Development/X11
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 License: MIT
@@ -167,10 +167,13 @@ for dir in *; do
     fi
 done
 
+# kill Xprint manpage since it clearly doesn't belong to printproto:
+rm -rf %{buildroot}/%{_mandir}/man7/Xprint*
+
 %clean
 rm -rf %{buildroot}
 
-%pre 
+%pre
 if [ -h %{_includedir}/X11 ]; then
 	rm -f %{_includedir}/X11
 fi
