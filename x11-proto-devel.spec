@@ -141,18 +141,7 @@ popd
 
 for dir in *; do
 pushd $dir
-./configure 	--prefix=%{_prefix} \
-        	--exec-prefix=%{_prefix} \
-        	--bindir=%{_bindir} \
-        	--sbindir=%{_sbindir} \
-        	--sysconfdir=%{_sysconfdir} \
-        	--datadir=%{_datadir} \
-        	--includedir=%{_includedir} \
-        	--libdir=%{_libdir} \
-        	--libexecdir=%{_libexecdir} \
-        	--mandir=%{_mandir} \
-        	--infodir=%{_infodir} 
-
+%configure2_5x
 %make
 popd
 done
