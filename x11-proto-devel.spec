@@ -26,7 +26,7 @@
 %define vnc_version 1.0.0
 %define windowswm_version 1.0.4
 %define xcmisc_version 1.2.1
-%define xext_version 7.1.2
+%define xext_version 7.2.0
 %define xf86bigfont_version 1.2.0
 %define xf86dga_version 2.1
 %define xf86dri_version 2.1.1
@@ -40,7 +40,7 @@
 Name: x11-proto-devel
 Summary: Xorg X11 protocol specification headers
 Version: 7.6
-Release: %mkrel 1
+Release: %mkrel 2
 Group: Development/X11
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 License: MIT
