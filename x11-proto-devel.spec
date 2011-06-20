@@ -1,3 +1,4 @@
+%define builddocs 1
 #define bootstrap 0
 #{?_without_bootstrap: %global bootstrap 0}
 #{?_with_bootstrap: %global bootstrap 1}
@@ -82,12 +83,14 @@ Source33: http://xorg.freedesktop.org/releases/individual/proto/dri2proto-%{dri2
 
 BuildRequires: x11-util-macros >= 1.0.1
 
+%if %builddocs
 # For docs:
 BuildRequires: docbook-dtd412-xml
 BuildRequires: docbook-dtd45-xml
 BuildRequires: fop
 BuildRequires: xmlto
 BuildRequires: x11-sgml-doctools
+%endif
 
 # (cg) As previously noted by gw, requiring libxt-devel and libxau-devel
 # creates a circular dependancy. This can cause problems when building e.g.
