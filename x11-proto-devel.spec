@@ -87,7 +87,7 @@ BuildRequires: x11-util-macros >= 1.0.1
 # For docs:
 BuildRequires: docbook-dtd412-xml
 BuildRequires: docbook-dtd45-xml
-BuildRequires: fop
+#BuildRequires: fop
 BuildRequires: xmlto
 BuildRequires: x11-sgml-doctools
 %endif
@@ -160,7 +160,7 @@ for dir in *; do
 done
 
 # kill Xprint manpage since it clearly doesn't belong to printproto:
-rm -rf %{buildroot}/%{_mandir}/man7/Xprint*
+rm -rf %{buildroot}%{_mandir}/man7/Xprint*
 
 %clean
 rm -rf %{buildroot}
@@ -207,12 +207,14 @@ fi
 %{_datadir}/doc/bigreqsproto
 %{_datadir}/doc/compositeproto
 %{_datadir}/doc/damageproto
+%{_datadir}/doc/dri2proto
 %{_datadir}/doc/fixesproto
 %{_datadir}/doc/fontsproto
 %{_datadir}/doc/inputproto
 %{_datadir}/doc/randrproto
 %{_datadir}/doc/recordproto
 %{_datadir}/doc/renderproto
+%{_datadir}/doc/resourceproto
 %{_datadir}/doc/scrnsaverproto
 %{_datadir}/doc/videoproto
 %{_datadir}/doc/xcmiscproto
