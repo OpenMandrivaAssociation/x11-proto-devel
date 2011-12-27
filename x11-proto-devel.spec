@@ -14,7 +14,7 @@
 %define fontcache_version 0.1.3
 %define fonts_version 2.1.1
 %define gl_version 1.4.14
-%define input_version 2.0.2
+%define input_version 2.1
 %define kb_version 1.0.5
 %define print_version 1.0.5
 %define randr_version 1.3.2
@@ -41,9 +41,8 @@
 Name: x11-proto-devel
 Summary: Xorg X11 protocol specification headers
 Version: 7.6
-Release: %mkrel 4
+Release: 5
 Group: Development/X11
-BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 License: MIT
 URL: http://xorg.freedesktop.org
 Source0: http://xorg.freedesktop.org/releases/individual/proto/applewmproto-%{applewm_version}.tar.bz2
@@ -119,10 +118,8 @@ X.Org X11 Protocol headers
 #-----------------------------------------------------------
 
 %package -n x11-proto-doc
-
 Summary: Documentation for the X11 protocol and extensions
 Group:   Development/X11
-
 # Old proto-devel versions had some docs:
 Conflicts: x11-proto-devel <= 7.6-0.3mdv2011.0
 
@@ -162,16 +159,12 @@ done
 # kill Xprint manpage since it clearly doesn't belong to printproto:
 rm -rf %{buildroot}%{_mandir}/man7/Xprint*
 
-%clean
-rm -rf %{buildroot}
-
 %pre
 if [ -h %{_includedir}/X11 ]; then
 	rm -f %{_includedir}/X11
 fi
 
 %files
-%defattr(-,root,root)
 %dir %{_datadir}/xcb
 %{_includedir}/GL/glx*
 %{_includedir}/GL/internal/*
@@ -203,7 +196,6 @@ fi
 %{python_sitelib}/xcbgen/xtypes.pyo
 
 %files -n x11-proto-doc
-%defattr(-,root,root)
 %{_datadir}/doc/bigreqsproto
 %{_datadir}/doc/compositeproto
 %{_datadir}/doc/damageproto
