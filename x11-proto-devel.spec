@@ -36,12 +36,12 @@
 %define xinerama_version 1.2.1
 %define xproto_version 7.0.22
 %define xproxymanagement_version 1.0.3
-%define xcb_version 1.6
+%define xcb_version 1.7
 
 Name: x11-proto-devel
 Summary: Xorg X11 protocol specification headers
 Version: 7.6
-Release: 5
+Release: 6
 Group: Development/X11
 License: MIT
 URL: http://xorg.freedesktop.org
