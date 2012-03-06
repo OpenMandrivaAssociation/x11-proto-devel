@@ -13,8 +13,8 @@
 %define fixes_version 5.0
 %define fontcache_version 0.1.3
 %define fonts_version 2.1.1
-%define gl_version 1.4.14
-%define input_version 2.1
+%define gl_version 1.4.15
+%define input_version 2.2
 %define kb_version 1.0.5
 %define print_version 1.0.5
 %define randr_version 1.3.2
@@ -79,6 +79,7 @@ Source30: http://xorg.freedesktop.org/releases/individual/proto/xproxymanagement
 Source31: http://xf4vnc.sf.net/vncproto-%{vnc_version}.tar.bz2
 Source32: http://xcb.freedesktop.org/dist/xcb-proto-%{xcb_version}.tar.bz2
 Source33: http://xorg.freedesktop.org/releases/individual/proto/dri2proto-%{dri2_version}.tar.bz2
+Source100: x11-proto-devel.rpmlintrc
 
 BuildRequires: x11-util-macros >= 1.0.1
 
