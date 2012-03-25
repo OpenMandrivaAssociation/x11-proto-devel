@@ -4,7 +4,7 @@
 #{?_with_bootstrap: %global bootstrap 1}
 
 %define applewm_version 1.4.2
-%define bigreqs_version 1.1.1
+%define bigreqs_version 1.1.2
 %define composite_version 0.4.2
 %define damage_version 1.2.1
 %define dmx_version 2.3.1
@@ -12,22 +12,22 @@
 %define evieext_version 1.1.1
 %define fixes_version 5.0
 %define fontcache_version 0.1.3
-%define fonts_version 2.1.1
+%define fonts_version 2.1.2
 %define gl_version 1.4.15
 %define input_version 2.2
-%define kb_version 1.0.5
+%define kb_version 1.0.6
 %define print_version 1.0.5
 %define randr_version 1.3.2
-%define record_version 1.14.1
+%define record_version 1.14.2
 %define render_version 0.11.1
 %define resource_version 1.2.0
-%define scrnsaver_version 1.2.1
+%define scrnsaver_version 1.2.2
 %define trap_version 3.4.3
 %define video_version 2.3.1
 %define vnc_version 1.0.0
 %define windowswm_version 1.0.4
-%define xcmisc_version 1.2.1
-%define xext_version 7.2.0
+%define xcmisc_version 1.2.2
+%define xext_version 7.2.1
 %define xf86bigfont_version 1.2.0
 %define xf86dga_version 2.1
 %define xf86dri_version 2.1.1
@@ -36,7 +36,7 @@
 %define xinerama_version 1.2.1
 %define xproto_version 7.0.22
 %define xproxymanagement_version 1.0.3
-%define xcb_version 1.7
+%define xcb_version 1.7.1
 
 Name: x11-proto-devel
 Summary: Xorg X11 protocol specification headers
@@ -214,3 +214,4 @@ fi
 %{_datadir}/doc/xextproto
 %{_datadir}/doc/xproxymanagementprotocol
 %{_datadir}/doc/xproto
+%{_datadir}/doc/kbproto
