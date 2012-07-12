@@ -8,7 +8,7 @@
 %define composite_version 0.4.2
 %define damage_version 1.2.1
 %define dmx_version 2.3.1
-%define dri2_version 2.6
+%define dri2_version 2.8
 %define evieext_version 1.1.1
 %define fixes_version 5.0
 %define fontcache_version 0.1.3
@@ -17,7 +17,7 @@
 %define input_version 2.2
 %define kb_version 1.0.6
 %define print_version 1.0.5
-%define randr_version 1.3.2
+%define randr_version 1.4.0
 %define record_version 1.14.2
 %define render_version 0.11.1
 %define resource_version 1.2.0
@@ -41,7 +41,7 @@
 Name: x11-proto-devel
 Summary: Xorg X11 protocol specification headers
 Version: 7.6
-Release: 9
+Release: 10
 Group: Development/X11
 License: MIT
 URL: http://xorg.freedesktop.org
