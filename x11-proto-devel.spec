@@ -36,7 +36,7 @@
 %define xinerama_version 1.2.1
 %define xproto_version 7.0.23
 %define xproxymanagement_version 1.0.3
-%define xcb_version 1.7.1
+%define xcb_version 1.8
 
 %define oldxorgnamedevel %mklibname xorg-x11
 
