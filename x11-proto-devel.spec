@@ -14,7 +14,7 @@
 %define fontcache_version 0.1.3
 %define fonts_version 2.1.2
 %define gl_version 1.4.16
-%define input_version 2.2
+%define input_version 2.3
 %define kb_version 1.0.6
 %define print_version 1.0.5
 %define randr_version 1.4.0
@@ -43,7 +43,7 @@
 Name:		x11-proto-devel
 Summary:	Xorg X11 protocol specification headers
 Version:	7.6
-Release:	13
+Release:	14
 Group:		Development/X11
 License:	MIT
 URL:		http://xorg.freedesktop.org
