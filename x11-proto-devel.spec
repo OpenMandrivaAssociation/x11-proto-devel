@@ -203,7 +203,6 @@ fi
 %{_datadir}/doc/dri2proto
 %{_datadir}/doc/fixesproto
 %{_datadir}/doc/fontsproto
-%{_datadir}/doc/inputproto
 %{_datadir}/doc/randrproto
 %{_datadir}/doc/recordproto
 %{_datadir}/doc/renderproto
