@@ -165,11 +165,6 @@ done
 # kill Xprint manpage since it clearly doesn't belong to printproto:
 rm -rf %{buildroot}%{_mandir}/man7/Xprint*
 
-%pre
-if [ -h %{_includedir}/X11 ]; then
-	rm -f %{_includedir}/X11
-fi
-
 %files
 %dir %{_datadir}/xcb
 %{_includedir}/GL/glx*
