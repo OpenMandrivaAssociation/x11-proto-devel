@@ -23,7 +23,7 @@
 %define resource_version 1.2.0
 %define scrnsaver_version 1.2.2
 %define trap_version 3.4.3
-%define video_version 2.3.1
+%define video_version 2.3.2
 %define vnc_version 1.0.0
 %define windowswm_version 1.0.4
 %define xcmisc_version 1.2.2
@@ -34,7 +34,7 @@
 %define xf86misc_version 0.9.3
 %define xf86vidmode_version 2.3.1
 %define xinerama_version 1.2.1
-%define xproto_version 7.0.23
+%define xproto_version 7.0.24
 %define xproxymanagement_version 1.0.3
 %define xcb_version 1.8
 
@@ -42,8 +42,8 @@
 
 Name:		x11-proto-devel
 Summary:	Xorg X11 protocol specification headers
-Version:	7.6
-Release:	14
+Version:	7.1
+Release:	1
 Group:		Development/X11
 License:	MIT
 URL:		http://xorg.freedesktop.org
