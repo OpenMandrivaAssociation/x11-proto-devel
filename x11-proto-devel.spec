@@ -43,7 +43,7 @@
 Name:		x11-proto-devel
 Summary:	Xorg X11 protocol specification headers
 Version:	7.7
-Release:	2
+Release:	3
 Group:		Development/X11
 License:	MIT
 URL:		http://xorg.freedesktop.org
