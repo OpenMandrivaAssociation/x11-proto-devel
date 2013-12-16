@@ -9,11 +9,12 @@
 %define damage_version 1.2.1
 %define dmx_version 2.3.1
 %define dri2_version 2.8
+%define dri3_version 1.0
 %define evieext_version 1.1.1
 %define fixes_version 5.0
 %define fontcache_version 0.1.3
 %define fonts_version 2.1.2
-%define gl_version 1.4.16
+%define gl_version 1.4.17
 %define input_version 2.3
 %define kb_version 1.0.6
 %define print_version 1.0.5
@@ -27,23 +28,23 @@
 %define vnc_version 1.0.0
 %define windowswm_version 1.0.4
 %define xcmisc_version 1.2.2
-%define xext_version 7.2.1
+%define xext_version 7.2.99.901
 %define xf86bigfont_version 1.2.0
 %define xf86dga_version 2.1
 %define xf86dri_version 2.1.1
 %define xf86misc_version 0.9.3
 %define xf86vidmode_version 2.3.1
 %define xinerama_version 1.2.1
-%define xproto_version 7.0.24
+%define xproto_version 7.0.25
 %define xproxymanagement_version 1.0.3
-%define xcb_version 1.8
+%define xcb_version 1.9
 
 %define oldxorgnamedevel %mklibname xorg-x11
 
 Name:		x11-proto-devel
 Summary:	Xorg X11 protocol specification headers
 Version:	7.7
-Release:	5
+Release:	6
 Group:		Development/X11
 License:	MIT
 URL:		http://xorg.freedesktop.org
@@ -81,8 +82,9 @@ Source30:	http://xorg.freedesktop.org/releases/individual/proto/xproxymanagement
 Source31:	http://xf4vnc.sf.net/vncproto-%{vnc_version}.tar.bz2
 Source32:	http://xcb.freedesktop.org/dist/xcb-proto-%{xcb_version}.tar.bz2
 Source33:	http://xorg.freedesktop.org/releases/individual/proto/dri2proto-%{dri2_version}.tar.bz2
-Source34:	config.guess
-Source35:	config.sub
+Source34:	http://xorg.freedesktop.org/releases/individual/proto/dri3proto-%{dri3_version}.tar.bz2
+Source35:	config.guess
+Source36:	config.sub
 Source100:	x11-proto-devel.rpmlintrc
 
 BuildRequires:	x11-util-macros >= 1.0.1
@@ -133,10 +135,10 @@ Documentation for the X11 protocol and extensions.
 #-----------------------------------------------------------
 
 %prep
-%setup -q -c x11-proto-devel -b1 -b2 -b3 -b4 -b5 -b6 -b7 -b8 -b9 -b10 -b11 -b12 -b13 -b14 -b15 -b16 -b17 -b18 -b19 -b20 -b21 -b22 -b23 -b24 -b25 -b26 -b27 -b28 -b29 -b30 -b31 -b32 -b33
+%setup -q -c x11-proto-devel -b1 -b2 -b3 -b4 -b5 -b6 -b7 -b8 -b9 -b10 -b11 -b12 -b13 -b14 -b15 -b16 -b17 -b18 -b19 -b20 -b21 -b22 -b23 -b24 -b25 -b26 -b27 -b28 -b29 -b30 -b31 -b32 -b33 -b34
 
-for i in $(find . -name config.sub);do cp -f %{SOURCE35} $i;done
-for i in $(find . -name config.guess);do cp -f %{SOURCE33} $i;done
+for i in $(find . -name config.sub);do cp -f %{SOURCE36} $i;done
+for i in $(find . -name config.guess);do cp -f %{SOURCE35} $i;done
 
 %build
 # vncproto is from cvs
@@ -201,8 +203,10 @@ rm -rf %{buildroot}%{_mandir}/man7/Xprint*
 %{_datadir}/doc/compositeproto
 %{_datadir}/doc/damageproto
 %{_datadir}/doc/dri2proto
+%{_datadir}/doc/dri3proto
 %{_datadir}/doc/fixesproto
 %{_datadir}/doc/fontsproto
+%{_datadir}/doc/inputproto
 %{_datadir}/doc/randrproto
 %{_datadir}/doc/recordproto
 %{_datadir}/doc/renderproto
