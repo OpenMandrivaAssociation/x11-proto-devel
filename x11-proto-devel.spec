@@ -17,6 +17,7 @@
 %define gl_version 1.4.17
 %define input_version 2.3
 %define kb_version 1.0.6
+%define present_version 1.0
 %define print_version 1.0.5
 %define randr_version 1.4.0
 %define record_version 1.14.2
@@ -44,7 +45,7 @@
 Name:		x11-proto-devel
 Summary:	Xorg X11 protocol specification headers
 Version:	7.7
-Release:	6
+Release:	7
 Group:		Development/X11
 License:	MIT
 URL:		http://xorg.freedesktop.org
@@ -83,8 +84,9 @@ Source31:	http://xf4vnc.sf.net/vncproto-%{vnc_version}.tar.bz2
 Source32:	http://xcb.freedesktop.org/dist/xcb-proto-%{xcb_version}.tar.bz2
 Source33:	http://xorg.freedesktop.org/releases/individual/proto/dri2proto-%{dri2_version}.tar.bz2
 Source34:	http://xorg.freedesktop.org/releases/individual/proto/dri3proto-%{dri3_version}.tar.bz2
-Source35:	config.guess
-Source36:	config.sub
+Source35:	http://xorg.freedesktop.org/releases/individual/proto/presentproto-%{present_version}.tar.bz2
+Source36:	config.guess
+Source37:	config.sub
 Source100:	x11-proto-devel.rpmlintrc
 
 BuildRequires:	x11-util-macros >= 1.0.1
@@ -135,10 +137,10 @@ Documentation for the X11 protocol and extensions.
 #-----------------------------------------------------------
 
 %prep
-%setup -q -c x11-proto-devel -b1 -b2 -b3 -b4 -b5 -b6 -b7 -b8 -b9 -b10 -b11 -b12 -b13 -b14 -b15 -b16 -b17 -b18 -b19 -b20 -b21 -b22 -b23 -b24 -b25 -b26 -b27 -b28 -b29 -b30 -b31 -b32 -b33 -b34
+%setup -q -c x11-proto-devel -b1 -b2 -b3 -b4 -b5 -b6 -b7 -b8 -b9 -b10 -b11 -b12 -b13 -b14 -b15 -b16 -b17 -b18 -b19 -b20 -b21 -b22 -b23 -b24 -b25 -b26 -b27 -b28 -b29 -b30 -b31 -b32 -b33 -b34 -b35
 
-for i in $(find . -name config.sub);do cp -f %{SOURCE36} $i;done
-for i in $(find . -name config.guess);do cp -f %{SOURCE35} $i;done
+for i in $(find . -name config.sub);do cp -f %{SOURCE37} $i;done
+for i in $(find . -name config.guess);do cp -f %{SOURCE36} $i;done
 
 %build
 # vncproto is from cvs
@@ -207,6 +209,7 @@ rm -rf %{buildroot}%{_mandir}/man7/Xprint*
 %{_datadir}/doc/fixesproto
 %{_datadir}/doc/fontsproto
 %{_datadir}/doc/inputproto
+%{_datadir}/doc/presentproto
 %{_datadir}/doc/randrproto
 %{_datadir}/doc/recordproto
 %{_datadir}/doc/renderproto
