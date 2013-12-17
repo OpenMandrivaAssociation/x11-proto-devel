@@ -94,6 +94,7 @@ BuildRequires:	x11-util-macros >= 1.0.1
 %if %builddocs
 # For docs:
 BuildRequires:	docbook-dtd412-xml
+BuildRequires:	docbook-dtd43-xml
 BuildRequires:	docbook-dtd45-xml
 #BuildRequires:	fop
 BuildRequires:	xmlto
