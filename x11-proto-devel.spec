@@ -29,7 +29,7 @@
 %define vnc_version 1.0.0
 %define windowswm_version 1.0.4
 %define xcmisc_version 1.2.2
-%define xext_version 7.3
+%define xext_version 7.3.0
 %define xf86bigfont_version 1.2.0
 %define xf86dga_version 2.1
 %define xf86dri_version 2.1.1
