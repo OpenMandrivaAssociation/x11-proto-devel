@@ -25,7 +25,7 @@ sources:
   "windowswmproto-1.0.4.tar.bz2": 1c9b522c66325f08bb989700b4b31911b6ae60ae
   "xcb-proto-1.9.tar.bz2": b22d6d64d1bb2490b61f5afb4f0be1f6efcfd8b7
   "xcmiscproto-1.2.2.tar.bz2": 59ae9ec6414964440bf654b207618e5dd66a32fb
-  "xextproto-7.2.99.901.tar.bz2": 59677ac36e562cc0af66a3a74708ed7bb3b21dea
+  "xextproto-7.3.0.tar.bz2": b8d736342dcb73b71584d99a1cb9806d93c25ff8
   "xf86bigfontproto-1.2.0.tar.bz2": 312a2ea708b257520c1af4393b69d73a393a478f
   "xf86dgaproto-2.1.tar.bz2": 97a06120e7195c968875e8ba42e82c90ab54948b
   "xf86driproto-2.1.1.tar.bz2": 23e861f40ba0f0cbbfd7db7ba2ef623762ffca17
