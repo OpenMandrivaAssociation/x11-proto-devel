@@ -1,4 +1,4 @@
-%bcond_without bootstrap
+%bcond_with bootstrap
 
 %define applewm_version 1.4.2
 %define bigreqs_version 1.1.2
