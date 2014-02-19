@@ -194,25 +194,25 @@ rm -rf %{buildroot}%{_mandir}/man7/Xprint*
 %{python_sitelib}/xcbgen/xtypes.pyo
 
 %files -n x11-proto-doc
-%{_datadir}/doc/bigreqsproto
-%{_datadir}/doc/compositeproto
-%{_datadir}/doc/damageproto
-%{_datadir}/doc/dri2proto
-%{_datadir}/doc/dri3proto
-%{_datadir}/doc/fixesproto
-%{_datadir}/doc/fontsproto
-%{_datadir}/doc/xproto
 %{_datadir}/doc/xextproto
 %{_datadir}/doc/videoproto
+%{_datadir}/doc/xproto
+%{_datadir}/doc/kbproto
 %{_datadir}/doc/xcmiscproto
-%{_datadir}/doc/recordproto
-%{_datadir}/doc/renderproto
+%{_datadir}/doc/dri2proto
+%{_datadir}/doc/dri3proto
+%{_datadir}/doc/bigreqsproto
+%{_datadir}/doc/damageproto
+%{_datadir}/doc/compositeproto
 %{_datadir}/doc/randrproto
 %{_datadir}/doc/resourceproto
-%{_datadir}/doc/kbproto
+%{_datadir}/doc/xproxymanagementprotocol
+%{_datadir}/doc/scrnsaverproto
+%{_datadir}/doc/recordproto
+%{_datadir}/doc/renderproto
+%{_datadir}/doc/fontsproto
 %if !%{with bootstrap}
 %{_datadir}/doc/inputproto
-%{_datadir}/doc/presentproto
-%{_datadir}/doc/scrnsaverproto
-%{_datadir}/doc/xproxymanagementprotocol
 %endif
+%{_datadir}/doc/presentproto
+%{_datadir}/doc/fixesproto
