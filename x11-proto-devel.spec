@@ -1,7 +1,4 @@
-%define builddocs 1
-#define bootstrap 0
-#{?_without_bootstrap: %global bootstrap 0}
-#{?_with_bootstrap: %global bootstrap 1}
+%bcond_without bootstrap
 
 %define applewm_version 1.4.2
 %define bigreqs_version 1.1.2
@@ -85,19 +82,16 @@ Source32:	http://xcb.freedesktop.org/dist/xcb-proto-%{xcb_version}.tar.bz2
 Source33:	http://xorg.freedesktop.org/releases/individual/proto/dri2proto-%{dri2_version}.tar.bz2
 Source34:	http://xorg.freedesktop.org/releases/individual/proto/dri3proto-%{dri3_version}.tar.bz2
 Source35:	http://xorg.freedesktop.org/releases/individual/proto/presentproto-%{present_version}.tar.bz2
-Source36:	config.guess
-Source37:	config.sub
 Source100:	x11-proto-devel.rpmlintrc
 
 BuildRequires:	x11-util-macros >= 1.0.1
 
-%if %builddocs
+%if !%{with bootstrap}
 # For docs:
 BuildRequires:	asciidoc
 BuildRequires:	docbook-dtd412-xml
 BuildRequires:	docbook-dtd43-xml
 BuildRequires:	docbook-dtd45-xml
-#BuildRequires:	fop
 BuildRequires:	xmlto
 BuildRequires:	x11-sgml-doctools
 %endif
@@ -140,9 +134,6 @@ Documentation for the X11 protocol and extensions.
 
 %prep
 %setup -q -c x11-proto-devel -b1 -b2 -b3 -b4 -b5 -b6 -b7 -b8 -b9 -b10 -b11 -b12 -b13 -b14 -b15 -b16 -b17 -b18 -b19 -b20 -b21 -b22 -b23 -b24 -b25 -b26 -b27 -b28 -b29 -b30 -b31 -b32 -b33 -b34 -b35
-
-for i in $(find . -name config.sub);do cp -f %{SOURCE37} $i;done
-for i in $(find . -name config.guess);do cp -f %{SOURCE36} $i;done
 
 %build
 # vncproto is from cvs
@@ -210,16 +201,18 @@ rm -rf %{buildroot}%{_mandir}/man7/Xprint*
 %{_datadir}/doc/dri3proto
 %{_datadir}/doc/fixesproto
 %{_datadir}/doc/fontsproto
-%{_datadir}/doc/inputproto
-%{_datadir}/doc/presentproto
-%{_datadir}/doc/randrproto
-%{_datadir}/doc/recordproto
-%{_datadir}/doc/renderproto
-%{_datadir}/doc/resourceproto
-%{_datadir}/doc/scrnsaverproto
+%{_datadir}/doc/xproto
+%{_datadir}/doc/xextproto
 %{_datadir}/doc/videoproto
 %{_datadir}/doc/xcmiscproto
-%{_datadir}/doc/xextproto
-%{_datadir}/doc/xproxymanagementprotocol
-%{_datadir}/doc/xproto
+%{_datadir}/doc/recordproto
+%{_datadir}/doc/renderproto
+%{_datadir}/doc/randrproto
+%{_datadir}/doc/resourceproto
 %{_datadir}/doc/kbproto
+%if !%{with bootstrap}
+%{_datadir}/doc/inputproto
+%{_datadir}/doc/presentproto
+%{_datadir}/doc/scrnsaverproto
+%{_datadir}/doc/xproxymanagementprotocol
+%endif
