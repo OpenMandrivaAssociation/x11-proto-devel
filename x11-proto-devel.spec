@@ -10,7 +10,7 @@
 %define evieext_version 1.1.1
 %define fixes_version 5.0
 %define fontcache_version 0.1.3
-%define fonts_version 2.1.2
+%define fonts_version 2.1.3
 %define gl_version 1.4.17
 %define input_version 2.3
 %define kb_version 1.0.6
@@ -33,7 +33,7 @@
 %define xf86misc_version 0.9.3
 %define xf86vidmode_version 2.3.1
 %define xinerama_version 1.2.1
-%define xproto_version 7.0.25
+%define xproto_version 7.0.26
 %define xproxymanagement_version 1.0.3
 %define xcb_version 1.10
 
@@ -42,7 +42,7 @@
 Name:		x11-proto-devel
 Summary:	Xorg X11 protocol specification headers
 Version:	7.7
-Release:	8
+Release:	9
 Group:		Development/X11
 License:	MIT
 URL:		http://xorg.freedesktop.org
