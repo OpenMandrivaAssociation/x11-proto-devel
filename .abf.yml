@@ -23,7 +23,7 @@ sources:
   "videoproto-2.3.2.tar.bz2": aa60e3b93c6a78ad03f1c502b910e7c45faaedbc
   "vncproto-1.0.0.tar.bz2": d559746ff85b909082c3f725fec55702e6029d8b
   "windowswmproto-1.0.4.tar.bz2": 1c9b522c66325f08bb989700b4b31911b6ae60ae
-  "xcb-proto-1.10.tar.bz2": 4595edfab6ab38f1f42f02f1caab5891fe114db3
+  "xcb-proto-1.11.tar.bz2": 608bd60663e223464d38acec0183ddb827776401
   "xcmiscproto-1.2.2.tar.bz2": 59ae9ec6414964440bf654b207618e5dd66a32fb
   "xextproto-7.3.0.tar.bz2": b8d736342dcb73b71584d99a1cb9806d93c25ff8
   "xf86bigfontproto-1.2.0.tar.bz2": 312a2ea708b257520c1af4393b69d73a393a478f
