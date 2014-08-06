@@ -175,23 +175,12 @@ rm -rf %{buildroot}%{_mandir}/man7/Xprint*
 %{_datadir}/xcb/*
 # xcbgen stuff
 %{python_sitelib}/xcbgen/__init__.py
-%{python_sitelib}/xcbgen/__init__.pyc
-%{python_sitelib}/xcbgen/__init__.pyo
 %{python_sitelib}/xcbgen/error.py
-%{python_sitelib}/xcbgen/error.pyc
-%{python_sitelib}/xcbgen/error.pyo
 %{python_sitelib}/xcbgen/expr.py
-%{python_sitelib}/xcbgen/expr.pyc
-%{python_sitelib}/xcbgen/expr.pyo
 %{python_sitelib}/xcbgen/matcher.py
-%{python_sitelib}/xcbgen/matcher.pyc
-%{python_sitelib}/xcbgen/matcher.pyo
 %{python_sitelib}/xcbgen/state.py
-%{python_sitelib}/xcbgen/state.pyc
-%{python_sitelib}/xcbgen/state.pyo
 %{python_sitelib}/xcbgen/xtypes.py
-%{python_sitelib}/xcbgen/xtypes.pyc
-%{python_sitelib}/xcbgen/xtypes.pyo
+%{python_sitelib}/xcbgen/__pycache__/*
 
 %files -n x11-proto-doc
 %{_datadir}/doc/xextproto
