@@ -16,7 +16,7 @@
 %define kb_version 1.0.6
 %define present_version 1.0
 %define print_version 1.0.5
-%define randr_version 1.4.0
+%define randr_version 1.4.1
 %define record_version 1.14.2
 %define render_version 0.11.1
 %define resource_version 1.2.0
@@ -42,7 +42,7 @@
 Name:		x11-proto-devel
 Summary:	Xorg X11 protocol specification headers
 Version:	7.7
-Release:	15
+Release:	16
 Group:		Development/X11
 License:	MIT
 URL:		http://xorg.freedesktop.org
