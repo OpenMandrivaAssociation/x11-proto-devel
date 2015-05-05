@@ -13,7 +13,7 @@
 %define fonts_version 2.1.3
 %define gl_version 1.4.17
 %define input_version 2.3.1
-%define kb_version 1.0.6
+%define kb_version 1.0.7
 %define present_version 1.0
 %define print_version 1.0.5
 %define randr_version 1.4.1
@@ -42,7 +42,7 @@
 Name:		x11-proto-devel
 Summary:	Xorg X11 protocol specification headers
 Version:	7.7
-Release:	16
+Release:	17
 Group:		Development/X11
 License:	MIT
 URL:		http://xorg.freedesktop.org
@@ -145,7 +145,7 @@ popd
 
 for dir in *; do
 pushd $dir
-%configure2_5x
+%configure
 %make
 popd
 done
