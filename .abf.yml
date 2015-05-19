@@ -14,7 +14,7 @@ sources:
   "inputproto-2.3.1.tar.bz2": 126b6ad57b5432e154485f900920765eae8fda45
   "kbproto-1.0.7.tar.bz2": bc9c0fa7d39edf4ac043e6eeaa771d3e245ac5b2
   "printproto-1.0.5.tar.bz2": 4ddb7781ebc2418d681a6f5e16d777aed56ea35e
-  "randrproto-1.4.1.tar.bz2": 7cd1daf5c56336079303d675b5a6788c90204016
+  "randrproto-1.5.0.tar.bz2": bc420745dc4af011988e9dcabdadf8829cbc2374
   "recordproto-1.14.2.tar.bz2": 1f48c4b0004d8b133efd0498e8d88d68d3b9199c
   "renderproto-0.11.1.tar.bz2": 7ae9868a358859fe539482b02414aa15c2d8b1e4
   "resourceproto-1.2.0.tar.bz2": 9ff9bb9243b0474330959dc3853973523c9dd9ce
