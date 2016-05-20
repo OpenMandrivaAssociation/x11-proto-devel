@@ -81,8 +81,8 @@ Source33:	http://xorg.freedesktop.org/releases/individual/proto/presentproto-%{p
 Source100:	x11-proto-devel.rpmlintrc
 Patch0:		presentproto-0001-Force-Window-and-Pixmap-to-be-CARD32-on-the-wire.patch
 # (tpg) https://bugs.freedesktop.org/show_bug.cgi?id=95490
-Patch1:		xproto-7.0.29-Make-whitespace-use-consistent.patch
-Patch2:		xproto-7.0.29-print-is-a-function-and-needs-parentheses.patch
+Patch1:		xcb-proto-1.12-Make-whitespace-use-consistent.patch
+Patch2:		xcb-proto-1.12-print-is-a-function-and-needs-parentheses.patch
 BuildRequires:	x11-util-macros >= 1.0.1
 
 %if !%{with bootstrap}
@@ -138,7 +138,7 @@ pushd presentproto-*
 %patch0 -p1
 popd
 
-pushd xproto-*
+pushd xcb-proto-*
 %patch1 -p1
 %patch2 -p1
 popd
