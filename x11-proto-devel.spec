@@ -13,7 +13,7 @@
 %define gl_version 1.4.17
 %define input_version 2.3.2
 %define kb_version 1.0.7
-%define present_version 1.0
+%define present_version 1.1
 %define print_version 1.0.5
 %define randr_version 1.5.0
 %define record_version 1.14.2
@@ -40,7 +40,7 @@
 Name:		x11-proto-devel
 Summary:	Xorg X11 protocol specification headers
 Version:	7.7
-Release:	28
+Release:	29
 Group:		Development/X11
 License:	MIT
 URL:		http://xorg.freedesktop.org
@@ -79,7 +79,6 @@ Source31:	http://xorg.freedesktop.org/releases/individual/proto/dri2proto-%{dri2
 Source32:	http://xorg.freedesktop.org/releases/individual/proto/dri3proto-%{dri3_version}.tar.bz2
 Source33:	http://xorg.freedesktop.org/releases/individual/proto/presentproto-%{present_version}.tar.bz2
 Source100:	x11-proto-devel.rpmlintrc
-Patch0:		presentproto-0001-Force-Window-and-Pixmap-to-be-CARD32-on-the-wire.patch
 # (tpg) https://bugs.freedesktop.org/show_bug.cgi?id=95490
 Patch1:		xcb-proto-1.12-Make-whitespace-use-consistent.patch
 Patch2:		xcb-proto-1.12-print-is-a-function-and-needs-parentheses.patch
