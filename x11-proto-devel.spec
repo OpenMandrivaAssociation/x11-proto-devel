@@ -4,7 +4,7 @@
 
 Name:		x11-proto-devel
 Summary:	Xorg X11 protocol specification headers
-Version:	2018.2
+Version:	2018.3
 Release:	1
 Group:		Development/X11
 License:	MIT
@@ -17,7 +17,7 @@ Source100:	x11-proto-devel.rpmlintrc
 Patch1:		xcb-proto-1.12-Make-whitespace-use-consistent.patch
 Patch2:		xcb-proto-1.12-print-is-a-function-and-needs-parentheses.patch
 BuildRequires:	x11-util-macros >= 1.0.1
-
+BuildRequires:	meson
 %if !%{with bootstrap}
 # For docs:
 BuildRequires:	asciidoc
@@ -51,36 +51,37 @@ Documentation for the X11 protocol and extensions.
 %prep
 %setup -qn xorgproto-%{version} -a10 -a11
 
-pushd xcb-proto-*
+cd xcb-proto-*
 %patch1 -p1
 %patch2 -p1
-popd
+cd ..
 
 # vncproto is from cvs
-pushd vncproto-*
+cd vncproto-*
 aclocal
 automake -a -c
 autoconf
-popd
+cd ..
 
 %build
-%configure
-%make
+%meson
+%meson_build
 
 for dir in xcb-proto-* vncproto-*; do
-	pushd $dir
+	cd $dir
 	%configure
 	%make
-	popd
+	cd ..
 done
 
 %install
-%makeinstall_std
+%meson_install
+
 for dir in xcb-proto-* vnc-proto-*; do
     if [ -d $dir ]; then
-	pushd $dir
+	cd $dir
 	%makeinstall_std
-	popd
+	cd ..
     fi
 done
 
@@ -108,7 +109,6 @@ rm -rf %{buildroot}%{_mandir}/man7/Xprint*
 %{python_sitelib}/xcbgen/state.py
 %{python_sitelib}/xcbgen/xtypes.py
 %{python_sitelib}/xcbgen/__pycache__/*
-
 
 %files -n x11-proto-doc
 %{_datadir}/doc/xorgproto
