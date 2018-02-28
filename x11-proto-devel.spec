@@ -4,7 +4,7 @@
 
 Name:		x11-proto-devel
 Summary:	Xorg X11 protocol specification headers
-Version:	2018.3
+Version:	2018.4
 Release:	1
 Group:		Development/X11
 License:	MIT
