@@ -19,7 +19,6 @@ sources:
   scrnsaverproto-1.2.2.tar.bz2: 640a2cbef5893aacda74799e6fa4d973e629b753
   trapproto-3.4.3.tar.bz2: b108aa39a7bfde530d5cd347fda7c58770d5b8da
   vncproto-1.0.0.tar.bz2: d559746ff85b909082c3f725fec55702e6029d8b
-  xcb-proto-1.12.tar.bz2: e93da374ecef9359370edc0160bcb8b2a2f7d9f6
   xcmiscproto-1.2.2.tar.bz2: 59ae9ec6414964440bf654b207618e5dd66a32fb
   xextproto-7.3.0.tar.bz2: b8d736342dcb73b71584d99a1cb9806d93c25ff8
   xf86bigfontproto-1.2.0.tar.bz2: 312a2ea708b257520c1af4393b69d73a393a478f
@@ -33,3 +32,4 @@ sources:
   presentproto-1.1.tar.bz2: b1294dbb3a8337f79252142b45aa123ee1aa7602
   inputproto-2.3.2.tar.bz2: 62b29a0c3b4ede9d129a0598cc6becf628a2158a
   videoproto-2.3.3.tar.bz2: 4556b5c2243a2ca290ea2140dc1a427c4bac8ba2
+  xcb-proto-1.13.tar.bz2: f7fa35ab59af18cecadbe83fe705281dcfd82ffd

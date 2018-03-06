@@ -33,14 +33,14 @@
 %define xinerama_version 1.2.1
 %define xproto_version 7.0.31
 %define xproxymanagement_version 1.0.3
-%define xcb_version 1.12
+%define xcb_version 1.13
 
 %define oldxorgnamedevel %mklibname xorg-x11
 
 Name:		x11-proto-devel
 Summary:	Xorg X11 protocol specification headers
 Version:	7.7
-Release:	29
+Release:	30
 Group:		Development/X11
 License:	MIT
 URL:		http://xorg.freedesktop.org
@@ -79,9 +79,6 @@ Source31:	http://xorg.freedesktop.org/releases/individual/proto/dri2proto-%{dri2
 Source32:	http://xorg.freedesktop.org/releases/individual/proto/dri3proto-%{dri3_version}.tar.bz2
 Source33:	http://xorg.freedesktop.org/releases/individual/proto/presentproto-%{present_version}.tar.bz2
 Source100:	x11-proto-devel.rpmlintrc
-# (tpg) https://bugs.freedesktop.org/show_bug.cgi?id=95490
-Patch1:		xcb-proto-1.12-Make-whitespace-use-consistent.patch
-Patch2:		xcb-proto-1.12-print-is-a-function-and-needs-parentheses.patch
 BuildRequires:	x11-util-macros >= 1.0.1
 
 %if !%{with bootstrap}
@@ -101,7 +98,7 @@ BuildRequires:	x11-sgml-doctools
 #
 # In order to build libx11 without the circular problem, it is necessary
 # to submit a bootstrapping version of this package that contains the minimal
-# (manual) pkgconfig() provides as commented below, and disable the 
+# (manual) pkgconfig() provides as commented below, and disable the
 # BuildRequires on libxt-devel and libxau-devel.
 # After libx11 is built and available, this package should be reverted.
 #if %bootstrap
@@ -132,15 +129,6 @@ Documentation for the X11 protocol and extensions.
 
 %prep
 %setup -q -c x11-proto-devel -b1 -b2 -b3 -b4 -b5 -b6 -b7 -b8 -b9 -b10 -b11 -b12 -b13 -b14 -b15 -b16 -b17 -b18 -b19 -b20 -b21 -b22 -b23 -b24 -b25 -b26 -b27 -b28 -b29 -b30 -b31 -b32 -b33
-
-pushd presentproto-*
-%patch0 -p1
-popd
-
-pushd xcb-proto-*
-%patch1 -p1
-%patch2 -p1
-popd
 
 %build
 # vncproto is from cvs
