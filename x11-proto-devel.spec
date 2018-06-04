@@ -5,17 +5,14 @@
 Name:		x11-proto-devel
 Summary:	Xorg X11 protocol specification headers
 Version:	2018.4
-Release:	1
+Release:	2
 Group:		Development/X11
 License:	MIT
 URL:		http://xorg.freedesktop.org
 Source0:	http://xorg.freedesktop.org/releases/individual/proto/xorgproto-%{version}.tar.bz2
-Source10:	http://xf4vnc.sf.net/vncproto-1.0.0.tar.bz2
-Source11:	http://xcb.freedesktop.org/dist/xcb-proto-1.12.tar.bz2
+Source10:	https://github.com/bbidulock/vncproto/archive/vncproto-1.1.tar.gz
+Source11:	http://xcb.freedesktop.org/dist/xcb-proto-1.13.tar.bz2
 Source100:	x11-proto-devel.rpmlintrc
-# (tpg) https://bugs.freedesktop.org/show_bug.cgi?id=95490
-Patch1:		xcb-proto-1.12-Make-whitespace-use-consistent.patch
-Patch2:		xcb-proto-1.12-print-is-a-function-and-needs-parentheses.patch
 BuildRequires:	x11-util-macros >= 1.0.1
 BuildRequires:	meson
 %if !%{with bootstrap}
@@ -41,12 +38,7 @@ X.Org X11 Protocol headers.
 %prep
 %setup -qn xorgproto-%{version} -a10 -a11
 
-cd xcb-proto-*
-%patch1 -p1
-%patch2 -p1
-cd ..
-
-# vncproto is from cvs
+# vncproto is from git
 cd vncproto-*
 aclocal
 automake -a -c
