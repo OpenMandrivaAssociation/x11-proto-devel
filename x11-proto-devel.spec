@@ -5,7 +5,7 @@
 Name:		x11-proto-devel
 Summary:	Xorg X11 protocol specification headers
 Version:	2018.4
-Release:	3
+Release:	4
 Group:		Development/X11
 License:	MIT
 URL:		http://xorg.freedesktop.org
@@ -52,7 +52,7 @@ cd ..
 for dir in xcb-proto-* vncproto-*; do
 	cd $dir
 	%configure
-	%make
+	%make_build
 	cd ..
 done
 
@@ -62,7 +62,7 @@ done
 for dir in xcb-proto-* vnc-proto-*; do
     if [ -d $dir ]; then
 	cd $dir
-	%makeinstall_std
+	%make_install
 	cd ..
     fi
 done
