@@ -1,4 +1,4 @@
 sources:
-  xorgproto-2019.2.tar.bz2: 2dedbe3e4daccf0c3d675759ed82161a3e4cf1b5
   vncproto-1.1.tar.gz: fca2e8135f895cd12f40ee1870d29fbdeb740898
-  xcb-proto-1.13.tar.bz2: f7fa35ab59af18cecadbe83fe705281dcfd82ffd
+  xcb-proto-1.14.tar.xz: 170307b3748cf6c9953db2017615821428fca8be
+  xorgproto-2019.2.tar.bz2: 2dedbe3e4daccf0c3d675759ed82161a3e4cf1b5
