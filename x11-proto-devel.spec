@@ -1,4 +1,4 @@
-%bcond_with bootstrap
+%bcond_without bootstrap
 
 %define oldxorgnamedevel %mklibname xorg-x11
 
