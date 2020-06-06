@@ -5,7 +5,7 @@
 Name:		x11-proto-devel
 Summary:	Xorg X11 protocol specification headers
 Version:	2020.1
-Release:	1
+Release:	2
 Group:		Development/X11
 License:	MIT
 URL:		http://xorg.freedesktop.org
@@ -26,12 +26,20 @@ BuildRequires:	x11-sgml-doctools
 %endif
 
 BuildRequires:	python
+BuildRequires:	python2
 Conflicts:	%{oldxorgnamedevel}-devel < 7.0
 Conflicts:	libxext6-devel <= 1.0.99.3-1mdv2010.0
 Obsoletes:	x11-proto-doc < 2018.3
 
 %description
 X.Org X11 Protocol headers.
+
+%package -n python2-xcbgen
+Summary:	Python 2.x version of the XCB generators
+Group:		Development/X11
+
+%description -n python2-xcbgen
+Python 2.x version of the XCB generators
 
 #-----------------------------------------------------------
 
@@ -49,21 +57,39 @@ cd ..
 %meson -Dlegacy=true
 %meson_build
 
+# Chromium uses the python xcbgen bits in a
+# python2 specific script :/
+# Google needs to get a brain
+cd xcb-proto-*
+mkdir buildpy2
+cd buildpy2
+export PYTHON=%{_bindir}/python2
+CONFIGURE_TOP=.. \
+	%configure
+%make_build
+unset PYTHON
+cd ../..
+
 for dir in xcb-proto-* vncproto-*; do
 	cd $dir
-	%configure
+	mkdir build
+	cd build
+	CONFIGURE_TOP=.. %configure
 	%make_build
-	cd ..
+	cd ../..
 done
 
 %install
 %meson_install
 
+cd xcb-proto-*/buildpy2
+%make_install
+cd ../..
 for dir in xcb-proto-* vnc-proto-*; do
     if [ -d $dir ]; then
-	cd $dir
+	cd $dir/build
 	%make_install
-	cd ..
+	cd ../..
     fi
 done
 
@@ -91,3 +117,6 @@ rm -rf %{buildroot}%{_mandir}/man7/Xprint*
 %{python_sitelib}/xcbgen/state.py
 %{python_sitelib}/xcbgen/xtypes.py
 %{python_sitelib}/xcbgen/__pycache__/*
+
+%files -n python2-xcbgen
+%{_prefix}/lib/python2*/site-packages/xcbgen
