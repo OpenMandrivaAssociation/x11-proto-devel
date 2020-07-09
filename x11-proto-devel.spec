@@ -1,6 +1,8 @@
+
 %bcond_without bootstrap
 
 %define oldxorgnamedevel %mklibname xorg-x11
+%define debug_package %{nil}
 
 Name:		x11-proto-devel
 Summary:	Xorg X11 protocol specification headers
