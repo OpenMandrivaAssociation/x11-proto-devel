@@ -6,7 +6,7 @@
 Name:		x11-proto-devel
 Summary:	Xorg X11 protocol specification headers
 Version:	2020.1
-Release:	4
+Release:	5
 Group:		Development/X11
 License:	MIT
 URL:		http://xorg.freedesktop.org
@@ -41,7 +41,7 @@ Summary:	Python 2.x version of the XCB generators
 Group:		Development/X11
 
 %description -n python2-xcbgen
-Python 2.x version of the XCB generators
+Python 2.x version of the XCB generators.
 
 #-----------------------------------------------------------
 
@@ -67,18 +67,19 @@ mkdir buildpy2
 cd buildpy2
 export PYTHON=%{_bindir}/python2
 CONFIGURE_TOP=.. \
-	%configure
+%configure
 %make_build
 unset PYTHON
 cd ../..
 
 for dir in xcb-proto-* vncproto-*; do
-	cd $dir
-	mkdir build
-	cd build
-	CONFIGURE_TOP=.. %configure
-	%make_build
-	cd ../..
+    cd $dir
+    mkdir build
+    cd build
+# (tpg) let's be noarch
+    CONFIGURE_TOP=.. %configure --libdir=%{_datadir}
+    %make_build
+    cd ../..
 done
 
 %install
