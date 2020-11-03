@@ -67,7 +67,8 @@ mkdir buildpy2
 cd buildpy2
 export PYTHON=%{_bindir}/python2
 CONFIGURE_TOP=.. \
-%configure
+# (tpg) let's be noarch
+%configure --libdir=%{_datadir}
 %make_build
 unset PYTHON
 cd ../..
@@ -109,7 +110,6 @@ rm -rf %{buildroot}%{_mandir}/man7/Xprint*
 %{_includedir}/X11/fonts/*
 %{_includedir}/X11/PM/*
 %{_datadir}/pkgconfig/*.pc
-%{_libdir}/pkgconfig/*.pc
 %{_datadir}/xcb/*
 # xcbgen stuff
 %{python_sitelib}/xcbgen/align.py
