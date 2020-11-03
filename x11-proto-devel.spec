@@ -1,4 +1,3 @@
-
 %bcond_without bootstrap
 
 %define oldxorgnamedevel %mklibname xorg-x11
@@ -7,7 +6,7 @@
 Name:		x11-proto-devel
 Summary:	Xorg X11 protocol specification headers
 Version:	2020.1
-Release:	3
+Release:	4
 Group:		Development/X11
 License:	MIT
 URL:		http://xorg.freedesktop.org
@@ -29,6 +28,7 @@ BuildRequires:	x11-sgml-doctools
 
 BuildRequires:	python
 BuildRequires:	python2
+BuildArch:	noarch
 Conflicts:	%{oldxorgnamedevel}-devel < 7.0
 Conflicts:	libxext6-devel <= 1.0.99.3-1mdv2010.0
 Obsoletes:	x11-proto-doc < 2018.3
