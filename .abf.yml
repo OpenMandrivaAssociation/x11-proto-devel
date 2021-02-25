@@ -1,4 +1,4 @@
 sources:
   vncproto-1.1.tar.gz: fca2e8135f895cd12f40ee1870d29fbdeb740898
   xcb-proto-1.14.1.tar.xz: 836d5b2dd00ff21bd038e92764fda9a256a1b022
-  xorgproto-2020.1.tar.bz2: 1cdab4e9ab796760ddb9582071328469a8eca08a
+  xorgproto-2021.3.tar.bz2: 6cff560a40ed151eaabbf221bb1713a635e128df
