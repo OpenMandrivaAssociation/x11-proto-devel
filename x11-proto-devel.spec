@@ -5,13 +5,13 @@
 
 Name:		x11-proto-devel
 Summary:	Xorg X11 protocol specification headers
-Version:	2020.1
-Release:	5
+Version:	2021.3
+Release:	1
 Group:		Development/X11
 License:	MIT
 URL:		http://xorg.freedesktop.org
 Source0:	http://xorg.freedesktop.org/releases/individual/proto/xorgproto-%{version}.tar.bz2
-Source10:	https://github.com/bbidulock/vncproto/archive/vncproto-1.1.tar.gz
+Source10:	https://github.com/bbidulock/vncproto/archive/vncproto-1.1.tar.bz2
 Source11:	https://xorg.freedesktop.org/archive/individual/proto/xcb-proto-1.14.1.tar.xz
 Source100:	x11-proto-devel.rpmlintrc
 BuildRequires:	x11-util-macros >= 1.0.1
