@@ -101,6 +101,7 @@ done
 rm -rf %{buildroot}%{_mandir}/man7/Xprint*
 
 %files
+%doc %{_docdir}/xorgproto
 %dir %{_datadir}/xcb
 %{_includedir}/GL/glx*
 %{_includedir}/GL/internal/*
