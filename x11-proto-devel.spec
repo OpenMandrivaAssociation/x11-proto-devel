@@ -6,7 +6,7 @@
 Name:		x11-proto-devel
 Summary:	Xorg X11 protocol specification headers
 Version:	2022.1
-Release:	2
+Release:	3
 Group:		Development/X11
 License:	MIT
 URL:		http://xorg.freedesktop.org
@@ -96,6 +96,14 @@ for dir in xcb-proto-* vnc-proto-*; do
 	cd ../..
     fi
 done
+
+# now in libx11 since release 1.6.9
+rm -rf %{buildroot}%{_includedir}/X11/extensions/XKBgeom.h
+# now in libXvMC since release 1.0.12
+rm -rf %{buildroot}%{_includedir}/X11/extensions/vldXvMC.h
+
+rm -rf %{buildroot}%{_datadir}/doc/xorgproto/*.txt
+rm -rf %{buildroot}%{_datadir}/doc/xorgproto/PM_spec
 
 # kill Xprint manpage since it clearly doesn't belong to printproto:
 rm -rf %{buildroot}%{_mandir}/man7/Xprint*
