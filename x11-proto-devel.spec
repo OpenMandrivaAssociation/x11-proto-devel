@@ -55,8 +55,15 @@ automake -a -c
 autoconf
 cd ..
 
+# Not using the %%meson macro because specifying the (correct)
+# crosscompiler breaks the build -- xorg-proto assumes
+# build == host (but the result is noarch, so this is fine)
+meson setup build \
+	--buildtype=plain \
+	--prefix=%{_prefix} \
+	-Dlegacy=true
+
 %build
-%meson -Dlegacy=true
 %meson_build
 
 # Chromium uses the python xcbgen bits in a
@@ -66,9 +73,11 @@ cd xcb-proto-*
 mkdir buildpy2
 cd buildpy2
 export PYTHON=%{_bindir}/python2
-CONFIGURE_TOP=.. \
 # (tpg) let's be noarch
-%configure --libdir=%{_datadir}
+# Not using the %%configure macro because specifying the (correct)
+# crosscompiler breaks the build -- xorg-proto assumes
+# build == host (but the result is noarch, so this is fine)
+../configure --prefix=%{_prefix} --libdir=%{_datadir}
 %make_build
 unset PYTHON
 cd ../..
@@ -78,7 +87,10 @@ for dir in xcb-proto-* vncproto-*; do
     mkdir build
     cd build
 # (tpg) let's be noarch
-    CONFIGURE_TOP=.. %configure --libdir=%{_datadir}
+# Not using the %%configure macro because specifying the (correct)
+# crosscompiler breaks the build -- xorg-proto assumes
+# build == host (but the result is noarch, so this is fine)
+    ../configure --prefix=%{_prefix} --libdir=%{_datadir}
     %make_build
     cd ../..
 done
