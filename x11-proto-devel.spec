@@ -1,4 +1,7 @@
 %bcond_without bootstrap
+# Presently still needed because some chromium derivates
+# haven't moved on
+%bcond_without python2
 
 %define oldxorgnamedevel %mklibname xorg-x11
 %define debug_package %{nil}
@@ -27,7 +30,9 @@ BuildRequires:	x11-sgml-doctools
 %endif
 
 BuildRequires:	python
+%if %{with python2}
 BuildRequires:	python2
+%endif
 BuildArch:	noarch
 Conflicts:	%{oldxorgnamedevel}-devel < 7.0
 Conflicts:	libxext6-devel <= 1.0.99.3-1mdv2010.0
@@ -66,6 +71,7 @@ meson setup build \
 %build
 %meson_build
 
+%if %{with python2}
 # Chromium uses the python xcbgen bits in a
 # python2 specific script :/
 # Google needs to get a brain
@@ -81,6 +87,7 @@ export PYTHON=%{_bindir}/python2
 %make_build
 unset PYTHON
 cd ../..
+%endif
 
 for dir in xcb-proto-* vncproto-*; do
     cd $dir
@@ -98,9 +105,11 @@ done
 %install
 %meson_install
 
+%if %{with python2}
 cd xcb-proto-*/buildpy2
 %make_install
 cd ../..
+%endif
 for dir in xcb-proto-* vnc-proto-*; do
     if [ -d $dir ]; then
 	cd $dir/build
@@ -142,5 +151,7 @@ rm -rf %{buildroot}%{_mandir}/man7/Xprint*
 %{python_sitelib}/xcbgen/xtypes.py
 %{python_sitelib}/xcbgen/__pycache__/*
 
+%if %{with python2}
 %files -n python2-xcbgen
 %{_prefix}/lib/python2*/site-packages/xcbgen
+%endif
