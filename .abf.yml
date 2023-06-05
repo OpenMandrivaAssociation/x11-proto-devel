@@ -1,4 +1,5 @@
 sources:
   vncproto-1.1.tar.bz2: 90f8600fb06c0c347551ad7096ef50492d86ba45
-  xorgproto-2022.2.tar.xz: c04081d31e06e771a673c7af9df989bf95ac2d8c
+  xorgproto-2023.1.tar.xz: 571dd894f0c6d75d3ae70c81c2fd26ed8744750b
   xcb-proto-1.15.2.tar.xz: d2499a55bf736c22bc6faeba1afe53e77f97e16f
+  
