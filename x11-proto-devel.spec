@@ -1,7 +1,7 @@
 %bcond_without bootstrap
 # Presently still needed because some chromium derivates
 # haven't moved on
-%bcond_without python2
+%bcond_with python2
 
 %define oldxorgnamedevel %mklibname xorg-x11
 %define debug_package %{nil}
@@ -9,7 +9,7 @@
 Name:		x11-proto-devel
 Summary:	Xorg X11 protocol specification headers
 Version:	2024.1
-Release:	1
+Release:	2
 Group:		Development/X11
 License:	MIT
 URL:		https://xorg.freedesktop.org
@@ -19,6 +19,9 @@ Source11:	https://xorg.freedesktop.org/archive/individual/proto/xcb-proto-1.17.0
 Source100:	x11-proto-devel.rpmlintrc
 BuildRequires:	x11-util-macros >= 1.0.1
 BuildRequires:	meson
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	make
 %if !%{with bootstrap}
 # For docs:
 BuildRequires:	asciidoc
