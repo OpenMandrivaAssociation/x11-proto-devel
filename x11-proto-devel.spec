@@ -17,6 +17,8 @@ Source0:	https://xorg.freedesktop.org/releases/individual/proto/xorgproto-%{vers
 Source10:	https://github.com/bbidulock/vncproto/archive/vncproto-1.1.tar.bz2
 Source11:	https://xorg.freedesktop.org/archive/individual/proto/xcb-proto-1.17.0.tar.xz
 Source100:	x11-proto-devel.rpmlintrc
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
 BuildRequires:	x11-util-macros >= 1.0.1
 BuildRequires:	meson
 BuildRequires:	autoconf
